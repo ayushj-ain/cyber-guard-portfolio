@@ -346,7 +346,7 @@ const Index = () => {
             onClick={() => goToSlide(i)}
             className="interactive w-1.5 h-1.5 rounded-full transition-all cursor-pointer border-0"
             style={{
-              background: i === currentSlide ? "hsl(var(--cyber-cyan))" : "hsl(174 100% 50% / 0.2)",
+              background: i === currentSlide ? "hsl(var(--cyber-cyan))" : "hsl(165 85% 48% / 0.2)",
               boxShadow: i === currentSlide ? "var(--glow-cyan)" : "none",
             }}
           />
@@ -579,7 +579,7 @@ const Index = () => {
                   <span
                     key={c}
                     className="font-body font-bold text-[0.85rem] tracking-[0.12em] py-2.5 px-5 uppercase border text-cyber-red"
-                    style={{ borderColor: "hsl(348 100% 50% / 0.3)" }}
+                    style={{ borderColor: "hsl(38 95% 58% / 0.3)" }}
                   >
                     {c}
                   </span>
@@ -627,7 +627,7 @@ const Index = () => {
                     key={s.l}
                     className="py-5 pr-9 mr-9"
                     style={{
-                      borderRight: i < arr.length - 1 ? "1px solid hsl(174 100% 50% / 0.15)" : "none",
+                      borderRight: i < arr.length - 1 ? "1px solid hsl(165 85% 48% / 0.15)" : "none",
                     }}
                   >
                     <div
@@ -689,7 +689,7 @@ const Index = () => {
         .cyber-btn-outline {
           background: transparent;
           color: hsl(var(--cyber-cyan));
-          border-color: hsl(174 100% 50% / 0.4);
+          border-color: hsl(165 85% 48% / 0.4);
         }
         .cyber-btn-outline:hover {
           border-color: hsl(var(--cyber-cyan));
@@ -715,7 +715,7 @@ const Index = () => {
         <div className="reveal pl-10 relative pb-30" style={{ paddingBottom: "120px" }}>
           <div
             className="absolute left-0 top-0 bottom-0 w-px"
-            style={{ background: "linear-gradient(to bottom, hsl(174 100% 50% / 0.4), hsl(174 100% 50% / 0.05))" }}
+            style={{ background: "linear-gradient(to bottom, hsl(165 85% 48% / 0.4), hsl(165 85% 48% / 0.05))" }}
           />
           {[
             {
@@ -752,12 +752,12 @@ const Index = () => {
 
         {/* PROJECTS */}
         <SectionHead num="01" title="KEY" accent="PROJECTS" id="projects" />
-        <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", border: "1px solid hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
+        <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", border: "1px solid hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {PROJECTS.map((p) => (
             <div key={p.num} className="cyber-card p-9 px-9 py-11 relative" style={{ padding: "44px 36px" }}>
               <div
                 className="absolute top-3 right-5 font-mono-cyber leading-none select-none pointer-events-none"
-                style={{ fontSize: "5rem", color: "hsl(174 100% 50% / 0.05)" }}
+                style={{ fontSize: "5rem", color: "hsl(165 85% 48% / 0.05)" }}
               >
                 {p.num}
               </div>
@@ -771,10 +771,10 @@ const Index = () => {
                     className="font-body font-semibold text-[0.63rem] tracking-[0.15em] uppercase py-1 px-3 border"
                     style={
                       t.v === "r"
-                        ? { borderColor: "hsl(348 100% 50% / 0.25)", color: "hsl(var(--cyber-red))", background: "hsl(348 100% 50% / 0.04)" }
+                        ? { borderColor: "hsl(38 95% 58% / 0.25)", color: "hsl(var(--cyber-red))", background: "hsl(38 95% 58% / 0.04)" }
                         : t.v === "v"
-                        ? { borderColor: "hsl(268 100% 50% / 0.3)", color: "hsl(268 100% 70%)", background: "hsl(268 100% 50% / 0.04)" }
-                        : { borderColor: "hsl(174 100% 50% / 0.2)", color: "hsl(var(--cyber-cyan))", background: "hsl(174 100% 50% / 0.04)" }
+                        ? { borderColor: "hsl(250 70% 65% / 0.3)", color: "hsl(250 70% 78%)", background: "hsl(250 70% 65% / 0.04)" }
+                        : { borderColor: "hsl(165 85% 48% / 0.2)", color: "hsl(var(--cyber-cyan))", background: "hsl(165 85% 48% / 0.04)" }
                     }
                   >
                     {t.label}
@@ -783,7 +783,7 @@ const Index = () => {
               </div>
               <div className="flex flex-col gap-2.5">
                 {p.metrics.map((m) => (
-                  <div key={m} className="font-body font-semibold text-[0.8rem] flex items-center gap-2.5" style={{ color: "hsl(174 100% 50% / 0.7)" }}>
+                  <div key={m} className="font-body font-semibold text-[0.8rem] flex items-center gap-2.5" style={{ color: "hsl(165 85% 48% / 0.7)" }}>
                     <span className="inline-block w-5 h-px bg-cyber-cyan" style={{ background: "hsl(var(--cyber-cyan))" }} />
                     {m}
                   </div>
@@ -798,7 +798,7 @@ const Index = () => {
         <div className="reveal grid md:grid-cols-2 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {SKILLS.map((s) => (
             <div key={s.label} className="cyber-card p-9" style={{ padding: "36px" }}>
-              <div className="font-display text-[0.63rem] font-bold tracking-[0.25em] uppercase text-cyber-cyan mb-6 pb-4 border-b flex items-center gap-3" style={{ borderColor: "hsl(174 100% 50% / 0.1)" }}>
+              <div className="font-display text-[0.63rem] font-bold tracking-[0.25em] uppercase text-cyber-cyan mb-6 pb-4 border-b flex items-center gap-3" style={{ borderColor: "hsl(165 85% 48% / 0.1)" }}>
                 <span className="w-1 h-1 bg-cyber-cyan glow-cyan" style={{ background: "hsl(var(--cyber-cyan))" }} />
                 {s.label}
               </div>
@@ -810,8 +810,8 @@ const Index = () => {
                     style={{ background: "hsl(0 0% 100% / 0.03)", borderColor: "hsl(0 0% 100% / 0.07)", color: "hsl(195 40% 70% / 0.7)" }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.background = "hsl(174 100% 50% / 0.08)";
-                      el.style.borderColor = "hsl(174 100% 50% / 0.35)";
+                      el.style.background = "hsl(165 85% 48% / 0.08)";
+                      el.style.borderColor = "hsl(165 85% 48% / 0.35)";
                       el.style.color = "hsl(var(--cyber-cyan))";
                     }}
                     onMouseLeave={(e) => {
@@ -856,7 +856,7 @@ const Index = () => {
             <div key={c.name} className="cyber-card" style={{ padding: "36px 28px" }}>
               <div
                 className="w-13 h-13 flex items-center justify-center mb-5 border"
-                style={{ width: "52px", height: "52px", background: "hsl(174 100% 50% / 0.07)", borderColor: "hsl(174 100% 50% / 0.2)", fontSize: "1.5rem" }}
+                style={{ width: "52px", height: "52px", background: "hsl(165 85% 48% / 0.07)", borderColor: "hsl(165 85% 48% / 0.2)", fontSize: "1.5rem" }}
               >
                 {c.icon}
               </div>
@@ -868,14 +868,14 @@ const Index = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 no-underline border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
+                  style={{ background: "hsl(165 85% 48% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </a>
               ) : (
                 <span
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
+                  style={{ background: "hsl(165 85% 48% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </span>
@@ -886,7 +886,7 @@ const Index = () => {
 
         {/* EDUCATION */}
         <SectionHead num="05" title="" accent="EDUCATION" id="education" />
-        <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
+        <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {[
             { deg: "Master of Computer Applications — MCA", school: "Poornima University, Jaipur · Cyber / Electronic Operations & Warfare", year: "AUG 2025 — MAY 2027" },
             { deg: "Bachelor's Degree — Computer Science", school: "Poddar International College, Jaipur", year: "2023 — 2025" },
@@ -895,7 +895,7 @@ const Index = () => {
               <div className="w-3 h-3 border-2 rounded-full flex-shrink-0" style={{ borderColor: "hsl(var(--cyber-cyan))" }} />
               <div className="flex-1">
                 <div className="font-display font-bold text-base text-white tracking-[-0.01em] mb-1.5">{e.deg}</div>
-                <div className="font-body text-[0.85rem] font-semibold tracking-[0.1em]" style={{ color: "hsl(174 100% 50% / 0.6)" }}>{e.school}</div>
+                <div className="font-body text-[0.85rem] font-semibold tracking-[0.1em]" style={{ color: "hsl(165 85% 48% / 0.6)" }}>{e.school}</div>
               </div>
               <div className="font-mono-cyber text-[1.1rem] whitespace-nowrap tracking-wider ml-auto" style={{ color: "hsl(195 40% 70% / 0.4)" }}>{e.year}</div>
             </div>
@@ -910,7 +910,7 @@ const Index = () => {
             style={{
               width: "600px",
               height: "600px",
-              background: "radial-gradient(circle, hsl(174 100% 50% / 0.06) 0%, transparent 70%)",
+              background: "radial-gradient(circle, hsl(165 85% 48% / 0.06) 0%, transparent 70%)",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
@@ -922,7 +922,7 @@ const Index = () => {
               fontSize: "clamp(2rem, 5vw, 4rem)",
               letterSpacing: "-0.03em",
               color: "#fff",
-              textShadow: "0 0 60px hsl(174 100% 50% / 0.15)",
+              textShadow: "0 0 60px hsl(165 85% 48% / 0.15)",
             }}
           >
             LET'S <em className="stroke-cyan not-italic">BUILD</em>
