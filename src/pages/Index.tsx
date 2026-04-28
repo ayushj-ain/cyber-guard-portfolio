@@ -742,8 +742,8 @@ const Index = () => {
           </div>
           <div className="flex justify-center gap-5 flex-wrap relative">
             <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-outline">✉ ayushjain100330@gmail.com</a>
-            <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⬢ GitHub</a>
-            <a href="https://linkedin.com/in/ayushjain-388092371" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⇗ LinkedIn</a>
+            <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">GitHub</a>
+            <a href="https://www.linkedin.com/in/ayush-jain-388092371/" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">LinkedIn</a>
           </div>
         </div>
       </div>
