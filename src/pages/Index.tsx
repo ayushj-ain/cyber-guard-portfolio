@@ -279,7 +279,42 @@ const Index = () => {
             className="absolute inset-0 z-[2] pointer-events-none"
             style={{
               background:
-                "linear-gradient(90deg, hsl(200 100% 1.5% / 0.85) 0%, hsl(200 100% 1.5% / 0.55) 50%, hsl(200 100% 1.5% / 0.85) 100%)",
+                "linear-gradient(95deg, hsl(222 47% 4% / 0.92) 0%, hsl(222 47% 4% / 0.45) 55%, hsl(222 47% 4% / 0.7) 100%)",
+            }}
+          />
+
+          {/* Color accent glows */}
+          <div
+            className="absolute top-[15%] left-[-10%] w-[40vw] h-[40vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(165 85% 48% / 0.18) 0%, transparent 65%)",
+              filter: "blur(40px)",
+            }}
+          />
+          <div
+            className="absolute bottom-[5%] right-[-5%] w-[35vw] h-[35vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(38 95% 58% / 0.14) 0%, transparent 65%)",
+              filter: "blur(40px)",
+            }}
+          />
+          <div
+            className="absolute top-[60%] left-[40%] w-[25vw] h-[25vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(250 70% 65% / 0.12) 0%, transparent 65%)",
+              filter: "blur(50px)",
+            }}
+          />
+
+          {/* Subtle grid */}
+          <div
+            className="absolute inset-0 z-[2] pointer-events-none opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsl(165 85% 48%) 1px, transparent 1px), linear-gradient(90deg, hsl(165 85% 48%) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+              maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
             }}
           />
 
@@ -288,7 +323,7 @@ const Index = () => {
             className="absolute top-1/2 left-1/2 font-display font-black whitespace-nowrap pointer-events-none select-none z-[3]"
             style={{
               fontSize: "clamp(8rem, 20vw, 22rem)",
-              color: "hsl(174 100% 50% / 0.04)",
+              color: "hsl(165 85% 48% / 0.05)",
               transform: "translate(-50%, -50%)",
               letterSpacing: "-0.05em",
             }}
@@ -302,6 +337,14 @@ const Index = () => {
             style={{
               background: "linear-gradient(to bottom, transparent, hsl(var(--cyber-cyan)), transparent)",
               opacity: 0.4,
+            }}
+          />
+          {/* Left accent bar */}
+          <div
+            className="absolute left-0 top-0 bottom-0 w-[2px] z-[4]"
+            style={{
+              background: "linear-gradient(to bottom, transparent, hsl(var(--cyber-red)), transparent)",
+              opacity: 0.3,
             }}
           />
 
