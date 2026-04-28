@@ -365,21 +365,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 2 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.6rem] text-cyber-red tracking-[0.2em] mb-8 text-glow-red">
-                // SPECIALIZATION
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Specialization
               </div>
               <h2
-                className="font-display font-black mb-8"
+                className="font-display font-bold mb-8"
                 style={{
-                  fontSize: "clamp(2rem, 6vw, 5rem)",
+                  fontSize: "clamp(2rem, 6vw, 4.8rem)",
                   color: "#fff",
-                  lineHeight: 1,
-                  letterSpacing: "-0.03em",
+                  lineHeight: 1.05,
+                  letterSpacing: "-0.035em",
                 }}
               >
-                BUILT FOR
+                Built for
                 <br />
-                <span className="stroke-red">DEFENSE.</span>
+                <span className="stroke-red">Defense.</span>
               </h2>
               <div className="flex gap-3 flex-wrap">
                 {["SIEM Monitoring", "SQL Injection Detection", "Incident Response", "Threat Hunting", "Log Correlation"].map((c) => (
