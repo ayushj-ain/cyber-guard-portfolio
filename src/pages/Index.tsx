@@ -120,19 +120,27 @@ const PROJECTS = [
 const SKILLS = [
   {
     label: "SOC & Defensive Ops",
-    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response"],
+    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response", "IOC Investigation"],
   },
   {
     label: "Ethical Hacking & Offense",
-    chips: ["Ethical Hacking", "Penetration Testing", "Vulnerability Exploitation", "Burp Suite", "Metasploit", "Nmap", "Wireshark", "Recon"],
+    chips: ["Ethical Hacking", "Penetration Testing", "VAPT", "Burp Suite", "Metasploit", "Nmap", "OWASP Top 10", "Recon", "CTF Player"],
+  },
+  {
+    label: "Network & Forensics",
+    chips: ["Wireshark", "Scapy", "tshark", "PCAP Analysis", "TCP/IP", "DNS / HTTP", "Firewall Rules", "IDS / IPS"],
   },
   {
     label: "Frameworks & Standards",
-    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61", "Cyber Kill Chain"],
+    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "NIST SP 800-61", "Cyber Kill Chain"],
   },
   {
-    label: "Tools & Scripting",
-    chips: ["Python", "Bash", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
+    label: "Scripting & Tooling",
+    chips: ["Python", "Bash", "Shell Scripting", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
+  },
+  {
+    label: "Soft Skills",
+    chips: ["Incident Documentation", "Threat Reporting", "Stakeholder Comms", "Analytical Thinking", "Crisis Response"],
   },
 ];
 
@@ -145,6 +153,20 @@ const CERTS = [
     href: undefined as string | undefined,
   },
   {
+    icon: "🚩",
+    name: "HackZero'26 CTF — Certificate of Participation",
+    body: "Competed in HackZero'26 Capture The Flag, solving challenges across Web Exploitation, Cryptography, Forensics, and Reverse Engineering with full writeups.",
+    badge: "HackZero'26",
+    href: undefined as string | undefined,
+  },
+  {
+    icon: "🎯",
+    name: "Social Engineering Defence Certified",
+    body: "Trained in identifying and defending against social engineering vectors: phishing, vishing, pretexting, baiting, and impersonation. Awareness program completion.",
+    badge: "SE Defence",
+    href: undefined as string | undefined,
+  },
+  {
     icon: "🔎",
     name: "Deloitte Australia Cyber Job Simulation",
     body: "Completed Deloitte's simulated consulting engagement: threat intelligence analysis, security risk reporting, and structured client advisory documentation.",
@@ -152,11 +174,18 @@ const CERTS = [
     href: undefined as string | undefined,
   },
   {
-    icon: "⬢",
+    icon: "🐙",
     name: "GitHub — Open Security Tooling",
-    body: "Active on GitHub publishing detection scripts, IR playbooks, and vulnerability assessment utilities. Hands-on contributor to defensive security tooling.",
-    badge: "↗ View GitHub",
+    body: "Active on GitHub publishing detection scripts, IR playbooks, phishing analyzers, and CTF writeups. Hands-on contributor to defensive security tooling.",
+    badge: "View GitHub →",
     href: "https://github.com/Ayushjain1030",
+  },
+  {
+    icon: "🎓",
+    name: "MCA — Cyber / Electronic Operations & Warfare",
+    body: "Pursuing Master of Computer Applications at Poornima University with specialization in offensive and defensive cybersecurity, electronic warfare, and threat ops.",
+    badge: "Poornima Univ.",
+    href: undefined as string | undefined,
   },
 ];
 
