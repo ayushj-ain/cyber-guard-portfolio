@@ -261,73 +261,80 @@ const Index = () => {
 
       {/* NAV */}
       <nav
-        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-between border-b backdrop-blur-xl px-6 md:px-15"
+        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-between border-b backdrop-blur-xl"
         style={{
-          paddingLeft: "60px",
-          paddingRight: "60px",
-          borderColor: "hsl(174 100% 50% / 0.12)",
-          background: "hsl(200 100% 1.5% / 0.88)",
+          paddingLeft: "clamp(20px, 5vw, 60px)",
+          paddingRight: "clamp(20px, 5vw, 60px)",
+          borderColor: "hsl(165 85% 48% / 0.12)",
+          background: "hsl(222 47% 4% / 0.85)",
         }}
       >
-        <div className="font-display text-[0.95rem] font-bold tracking-[0.22em] text-cyber-cyan text-glow-cyan">
-          AYUSH JAIN
-        </div>
-        <div className="hidden md:flex gap-9">
+        {/* Monogram logo */}
+        <a href="#top" className="flex items-center gap-3 no-underline group">
+          <div
+            className="flex items-center justify-center w-9 h-9 border font-display font-bold text-[0.85rem] tracking-tight transition-all"
+            style={{
+              borderColor: "hsl(165 85% 48% / 0.5)",
+              color: "hsl(var(--cyber-cyan))",
+              background: "hsl(165 85% 48% / 0.08)",
+            }}
+          >
+            AJ
+          </div>
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="font-display text-[0.7rem] font-semibold tracking-[0.18em] uppercase text-white">
+              Ayush Jain
+            </span>
+            <span className="font-mono-cyber text-[0.6rem] tracking-[0.22em] uppercase" style={{ color: "hsl(195 25% 65% / 0.55)" }}>
+              SOC · Ethical Hacker
+            </span>
+          </div>
+        </a>
+
+        {/* Center nav */}
+        <div className="hidden md:flex gap-7 lg:gap-9 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="font-body font-semibold text-[0.78rem] tracking-[0.18em] uppercase no-underline transition-colors"
-              style={{ color: "hsl(195 40% 70% / 0.5)" }}
+              className="font-body font-semibold text-[0.72rem] tracking-[0.2em] uppercase no-underline transition-colors relative"
+              style={{ color: "hsl(195 25% 65% / 0.55)" }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.color = "hsl(var(--cyber-cyan))";
-                (e.currentTarget as HTMLElement).style.textShadow = "0 0 20px hsl(174 100% 50% / 0.6)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "hsl(195 40% 70% / 0.5)";
-                (e.currentTarget as HTMLElement).style.textShadow = "none";
+                (e.currentTarget as HTMLElement).style.color = "hsl(195 25% 65% / 0.55)";
               }}
             >
               {l.label}
             </a>
           ))}
         </div>
-        <div className="flex items-center gap-4">
-          <div
-            className="hidden sm:flex items-center gap-2 py-1.5 px-3 rounded-full border"
-            style={{
-              borderColor: "hsl(165 85% 48% / 0.25)",
-              background: "hsl(165 85% 48% / 0.06)",
-            }}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(165 85% 48% / 0.55)" }} />
-              <span className="relative rounded-full h-2 w-2" style={{ background: "hsl(var(--cyber-cyan))" }} />
-            </span>
-            <span className="font-body font-semibold text-[0.65rem] tracking-[0.2em] uppercase text-cyber-cyan">
-              Open to Work
-            </span>
-          </div>
-          <a
-            href="#contact"
-            className="hidden md:inline-flex font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
-            style={{
-              background: "hsl(var(--cyber-cyan))",
-              color: "hsl(var(--void))",
-              boxShadow: "0 0 20px hsl(165 85% 48% / 0.35)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px hsl(165 85% 48% / 0.6)";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px hsl(165 85% 48% / 0.35)";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-            }}
-          >
-            Hire Me →
-          </a>
-        </div>
+
+        {/* CTA */}
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
+          style={{
+            background: "hsl(var(--cyber-cyan))",
+            color: "hsl(var(--void))",
+            boxShadow: "0 0 24px hsl(165 85% 48% / 0.4)",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 36px hsl(165 85% 48% / 0.7)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px hsl(165 85% 48% / 0.4)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+          }}
+        >
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(var(--void) / 0.6)" }} />
+            <span className="relative rounded-full h-1.5 w-1.5" style={{ background: "hsl(var(--void))" }} />
+          </span>
+          Hire Me
+        </a>
       </nav>
 
       {/* Scroll progress dots */}
