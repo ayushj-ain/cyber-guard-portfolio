@@ -189,8 +189,8 @@ const Index = () => {
           background: "hsl(200 100% 1.5% / 0.88)",
         }}
       >
-        <div className="font-display text-[0.85rem] font-black tracking-[0.25em] text-cyber-cyan text-glow-cyan">
-          AJ<span className="text-cyber-red not-italic">::</span>CYBER
+        <div className="font-display text-[0.95rem] font-bold tracking-[0.22em] text-cyber-cyan text-glow-cyan">
+          AYUSH JAIN
         </div>
         <div className="hidden md:flex gap-9">
           {NAV_LINKS.map((l) => (
