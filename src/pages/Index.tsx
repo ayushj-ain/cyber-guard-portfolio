@@ -17,7 +17,7 @@ const PROJECTS = [
     num: "01",
     year: "2024",
     title: "SOC Monitoring & Alert Triage Lab",
-    desc: "End-to-end SOC simulation built on Splunk + ELK Stack. Investigated 50+ enterprise-grade security alerts achieving a 95% accurate triage rate. Correlated logs across network, endpoint, and cloud telemetry to detect 10 distinct attack patterns including spear phishing, credential brute-force, lateral movement, and DNS exfiltration. Authored runbooks aligned to NIST SP 800-61.",
+    desc: "End-to-end SOC simulation built on Splunk + ELK Stack. Investigated 50+ enterprise-grade security alerts achieving a 95% accurate triage rate. Correlated logs across network, endpoint, and cloud telemetry to detect 10 distinct attack patterns including spear phishing, credential brute-force, lateral movement, and DNS exfiltration. Authored runbooks aligned to NIST SP 800-61 with severity scoring and escalation matrices.",
     tags: [
       { label: "SIEM", v: "" },
       { label: "Splunk", v: "" },
@@ -34,7 +34,7 @@ const PROJECTS = [
     num: "02",
     year: "2024",
     title: "Ethical Hacking — SQL Injection Assessment Pipeline",
-    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
+    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021 with full remediation guidance.",
     tags: [
       { label: "Ethical Hacking", v: "r" },
       { label: "Burp Suite", v: "" },
@@ -51,7 +51,7 @@ const PROJECTS = [
     num: "03",
     year: "2023",
     title: "Threat Intelligence & Ransomware IR Simulation",
-    desc: "Architected and executed a full-kill-chain ransomware incident response playbook covering all 6 NIST IR phases (Prep → Lessons Learned). Parsed 5,000+ firewall and Snort IDS log entries with Bash + Python scripts to extract IOCs, build a MITRE ATT&CK mapping (T1486, T1027, T1059), and produce an executive after-action report. Investigation time cut by 40%.",
+    desc: "Architected and executed a full-kill-chain ransomware incident response playbook covering all 6 NIST IR phases (Prep → Lessons Learned). Parsed 5,000+ firewall and Snort IDS log entries with Bash + Python scripts to extract IOCs, build a MITRE ATT&CK mapping (T1486, T1027, T1059), and produce an executive after-action report. Investigation cycle time cut by 40%.",
     tags: [
       { label: "Ransomware IR", v: "r" },
       { label: "MITRE ATT&CK", v: "" },
@@ -62,6 +62,57 @@ const PROJECTS = [
       "All 6 NIST IR phases executed end-to-end",
       "5,000+ log entries parsed for IOCs",
       "40% faster investigation cycle time",
+    ],
+  },
+  {
+    num: "04",
+    year: "2025",
+    title: "HackZero'26 CTF — Web & Crypto Challenge Solver",
+    desc: "Competed in the HackZero'26 Capture The Flag tournament across Web, Crypto, Forensics, and Reverse Engineering categories. Solved 12 challenges including JWT token forgery, blind XSS exploitation, RSA weak-key recovery, and PCAP forensics. Documented every exploit chain with reproducible payloads and writeups published to GitHub for the security community.",
+    tags: [
+      { label: "CTF", v: "r" },
+      { label: "Web Exploitation", v: "" },
+      { label: "Cryptography", v: "" },
+      { label: "Forensics", v: "v" },
+    ],
+    metrics: [
+      "12 challenges solved across 4 categories",
+      "Reproducible exploit writeups on GitHub",
+      "JWT, RSA, XSS & PCAP exploit chains",
+    ],
+  },
+  {
+    num: "05",
+    year: "2025",
+    title: "Phishing Email Analyzer & Threat Triage Tool",
+    desc: "Built a Python-based phishing email forensic analyzer that parses raw .eml files, extracts SPF/DKIM/DMARC verdicts, decodes obfuscated URLs, performs WHOIS + VirusTotal IOC lookups, and outputs a SOC-ready triage report in JSON. Reduced analyst time-per-email from 8 minutes to under 90 seconds across a 200-email test corpus.",
+    tags: [
+      { label: "Phishing", v: "r" },
+      { label: "Python", v: "" },
+      { label: "Threat Intel", v: "" },
+      { label: "Automation", v: "v" },
+    ],
+    metrics: [
+      "200-email test corpus, 92% true-positive rate",
+      "Time-per-email cut from 8 min → 90 sec",
+      "SPF / DKIM / DMARC + VirusTotal integration",
+    ],
+  },
+  {
+    num: "06",
+    year: "2025",
+    title: "Network Traffic Anomaly Detector (Wireshark + Python)",
+    desc: "Engineered a network anomaly detection toolkit that ingests live PCAP captures via Scapy + tshark, baselines normal traffic with statistical profiling, and flags suspicious indicators: port scans, DNS tunneling, beaconing C2 traffic, and ARP spoofing. Tested against 6 simulated attack scenarios in an isolated lab with a custom dashboard for visualization.",
+    tags: [
+      { label: "Network Security", v: "r" },
+      { label: "Wireshark", v: "" },
+      { label: "Scapy", v: "" },
+      { label: "Anomaly Detection", v: "v" },
+    ],
+    metrics: [
+      "6 attack scenarios validated end-to-end",
+      "Live PCAP ingestion via Scapy + tshark",
+      "Detects C2 beaconing, scans, DNS tunneling",
     ],
   },
 ];
