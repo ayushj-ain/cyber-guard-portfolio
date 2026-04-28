@@ -830,23 +830,66 @@ const Index = () => {
         </div>
 
         {/* EXPERIENCE */}
-        <SectionHead num="03" title="WORK" accent="EXPERIENCE" id="experience" />
-        <div className="reveal cyber-card pb-30" style={{ padding: "56px", marginBottom: "120px" }}>
-          <div className="font-display text-[1.5rem] font-black text-white tracking-[-0.02em] mb-2.5">Cybersecurity Analyst Intern</div>
-          <div className="font-body font-bold text-base tracking-[0.12em] text-cyber-cyan uppercase mb-1.5">Deloitte Australia — Virtual Cyber Job Simulation</div>
-          <div className="font-mono-cyber text-[0.85rem] tracking-[0.25em] mb-10 uppercase" style={{ color: "hsl(195 40% 70% / 0.5)" }}>2024 &nbsp;·&nbsp; Simulated Enterprise Engagement</div>
-          <ul className="list-none flex flex-col gap-4">
-            {[
-              <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
-              <>Produced a structured risk advisory report recommending <strong className="text-white">4 strategic remediation actions</strong>, improving simulated client compliance readiness score by 25%.</>,
-              <>Collaborated asynchronously with a virtual team of <strong className="text-white">8 analysts</strong> to deliver a consolidated threat landscape briefing within a 48-hour deadline.</>,
-            ].map((li, i) => (
-              <li key={i} className="text-base leading-[1.7] pl-7 relative" style={{ color: "hsl(195 40% 70% / 0.75)" }}>
-                <span className="absolute left-0 top-[3px] text-cyber-cyan text-[0.65rem]">▶</span>
-                {li}
-              </li>
-            ))}
-          </ul>
+        <SectionHead num="03" title="" accent="EXPERIENCE" id="experience" />
+        <div className="reveal flex flex-col gap-6" style={{ paddingBottom: "120px" }}>
+          {[
+            {
+              role: "Cybersecurity Analyst Intern",
+              org: "Deloitte Australia — Virtual Cyber Job Simulation",
+              period: "2024 · Simulated Enterprise Engagement",
+              tag: "Internship",
+              points: [
+                <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
+                <>Produced a structured risk advisory report recommending <strong className="text-white">4 strategic remediation actions</strong>, improving simulated client compliance readiness score by 25%.</>,
+                <>Collaborated asynchronously with a virtual team of <strong className="text-white">8 analysts</strong> to deliver a consolidated threat landscape briefing within a 48-hour deadline.</>,
+              ],
+            },
+            {
+              role: "Independent Security Researcher",
+              org: "Self-directed · Open Source & Lab Environments",
+              period: "2023 — Present · Ongoing",
+              tag: "Self-Directed",
+              points: [
+                <>Built and maintained a personal home lab with <strong className="text-white">Splunk, ELK, pfSense, and intentionally vulnerable VMs</strong> (DVWA, Metasploitable, HackTheBox machines) for continuous detection engineering practice.</>,
+                <>Authored <strong className="text-white">6+ open-source security tools</strong> on GitHub including a phishing analyzer, network anomaly detector, and SQLi scanner — combined with full reproducible writeups.</>,
+                <>Active CTF competitor on HackZero, TryHackMe, and HackTheBox — solved <strong className="text-white">12+ multi-category challenges</strong> spanning web, crypto, forensics, and reverse engineering.</>,
+              ],
+            },
+            {
+              role: "Cybersecurity Awareness Volunteer",
+              org: "College Tech Society · Poddar International College",
+              period: "2024 · Workshops & Outreach",
+              tag: "Volunteer",
+              points: [
+                <>Delivered <strong className="text-white">3 hands-on workshops</strong> on phishing recognition, password hygiene, and safe browsing to 80+ students across multiple departments.</>,
+                <>Designed an internal awareness campaign with simulated phishing emails, achieving a measurable <strong className="text-white">35% reduction in click-rate</strong> over a 4-week cycle.</>,
+              ],
+            },
+          ].map((xp) => (
+            <div key={xp.role} className="cyber-card relative" style={{ padding: "44px 48px" }}>
+              <div className="flex items-start justify-between gap-6 mb-6 flex-wrap">
+                <div>
+                  <div className="font-display text-[1.35rem] font-bold text-white tracking-[-0.02em] mb-2">{xp.role}</div>
+                  <div className="font-body font-semibold text-[0.9rem] tracking-[0.1em] text-cyber-cyan uppercase mb-1.5">{xp.org}</div>
+                  <div className="font-mono-cyber text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "hsl(195 25% 65% / 0.5)" }}>{xp.period}</div>
+                </div>
+                <span
+                  className="font-mono-cyber text-[0.65rem] tracking-[0.22em] uppercase py-1 px-3 border whitespace-nowrap"
+                  style={{ color: "hsl(38 95% 58%)", borderColor: "hsl(38 95% 58% / 0.35)", background: "hsl(38 95% 58% / 0.06)" }}
+                >
+                  {xp.tag}
+                </span>
+              </div>
+              <ul className="list-none flex flex-col gap-3.5">
+                {xp.points.map((li, i) => (
+                  <li key={i} className="text-[0.95rem] leading-[1.7] pl-6 relative" style={{ color: "hsl(195 25% 75% / 0.75)" }}>
+                    <span className="absolute left-0 top-[7px] w-2.5 h-px" style={{ background: "hsl(var(--cyber-cyan))" }} />
+                    {li}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* CERTS */}
