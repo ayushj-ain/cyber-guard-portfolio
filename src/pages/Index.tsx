@@ -504,12 +504,12 @@ const Index = () => {
           box-shadow: var(--glow-cyan);
           transform: translateY(-2px);
         }
-        .cyber-btn-red {
+        .cyber-btn-amber {
           background: transparent;
           color: hsl(var(--cyber-red));
-          border-color: hsl(348 100% 50% / 0.4);
+          border-color: hsl(38 95% 58% / 0.45);
         }
-        .cyber-btn-red:hover {
+        .cyber-btn-amber:hover {
           border-color: hsl(var(--cyber-red));
           box-shadow: var(--glow-red);
           transform: translateY(-2px);
