@@ -994,20 +994,29 @@ const Index = () => {
 };
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
-  <div id={id} className="reveal flex items-end gap-6 mb-18 pt-30" style={{ marginBottom: "72px", paddingTop: "120px" }}>
-    <div className="font-mono-cyber leading-none font-medium" style={{ fontSize: "2.5rem", color: "hsl(165 85% 48% / 0.35)" }}>{num}</div>
+  <div id={id} className="reveal mb-12" style={{ paddingTop: "120px", marginBottom: "56px" }}>
+    <div className="flex items-center gap-3 mb-4">
+      <span
+        className="font-mono-cyber text-[0.7rem] tracking-[0.32em] uppercase font-medium py-1 px-2.5 border"
+        style={{ color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.3)", background: "hsl(165 85% 48% / 0.05)" }}
+      >
+        Section {num}
+      </span>
+      <span className="flex-1 h-px" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.35), transparent)" }} />
+    </div>
     <h2
-      className="font-display font-bold"
+      className="font-display font-bold flex items-baseline gap-3 flex-wrap"
       style={{
-        fontSize: "clamp(1.8rem, 4.5vw, 3.2rem)",
-        letterSpacing: "-0.035em",
+        fontSize: "clamp(2rem, 5vw, 3.6rem)",
+        letterSpacing: "-0.04em",
         color: "#fff",
         textShadow: "0 0 40px hsl(165 85% 48% / 0.12)",
       }}
     >
-      {title && <span>{title} </span>}<span className="text-cyber-cyan">{accent}</span>
+      {title && <span className="text-white opacity-90">{title}</span>}
+      <span className="text-cyber-cyan">{accent}</span>
+      <span className="text-cyber-red font-display font-bold">.</span>
     </h2>
-    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.4), transparent)" }} />
   </div>
 );
 
