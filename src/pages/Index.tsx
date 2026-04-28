@@ -569,7 +569,7 @@ const Index = () => {
               >
                 {p.num}
               </div>
-              <div className="font-mono-cyber text-base text-cyber-red tracking-[0.15em] mb-5">// {p.year}</div>
+              <div className="font-mono-cyber text-xs text-cyber-red tracking-[0.25em] mb-5 uppercase">{p.year}</div>
               <h3 className="font-display text-[0.95rem] font-bold text-white leading-[1.25] mb-5 tracking-[0.02em]">{p.title}</h3>
               <p className="text-[0.9rem] leading-[1.75] mb-7" style={{ color: "hsl(195 40% 70% / 0.6)" }}>{p.desc}</p>
               <div className="flex flex-wrap gap-2 mb-6">
