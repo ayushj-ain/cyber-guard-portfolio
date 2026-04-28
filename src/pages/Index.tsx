@@ -212,9 +212,41 @@ const Index = () => {
             </a>
           ))}
         </div>
-        <div className="font-mono-cyber text-[1.1rem] text-cyber-cyan tracking-wider flex items-center gap-2.5">
-          <div className="pulse" />
-          <span className="hidden sm:inline">AVAILABLE FOR HIRE</span>
+        <div className="flex items-center gap-4">
+          <div
+            className="hidden sm:flex items-center gap-2 py-1.5 px-3 rounded-full border"
+            style={{
+              borderColor: "hsl(165 85% 48% / 0.25)",
+              background: "hsl(165 85% 48% / 0.06)",
+            }}
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(165 85% 48% / 0.55)" }} />
+              <span className="relative rounded-full h-2 w-2" style={{ background: "hsl(var(--cyber-cyan))" }} />
+            </span>
+            <span className="font-body font-semibold text-[0.65rem] tracking-[0.2em] uppercase text-cyber-cyan">
+              Open to Work
+            </span>
+          </div>
+          <a
+            href="#contact"
+            className="hidden md:inline-flex font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
+            style={{
+              background: "hsl(var(--cyber-cyan))",
+              color: "hsl(var(--void))",
+              boxShadow: "0 0 20px hsl(165 85% 48% / 0.35)",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px hsl(165 85% 48% / 0.6)";
+              (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px hsl(165 85% 48% / 0.35)";
+              (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+            }}
+          >
+            Hire Me →
+          </a>
         </div>
       </nav>
 
