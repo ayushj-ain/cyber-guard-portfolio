@@ -711,7 +711,7 @@ const Index = () => {
       {/* SECTIONS */}
       <div className="relative z-10 max-w-[1160px] mx-auto px-6 md:px-15" style={{ paddingLeft: "clamp(24px, 5vw, 60px)", paddingRight: "clamp(24px, 5vw, 60px)" }}>
         {/* CAREER */}
-        <SectionHead num="00" title="CAREER" accent="TIMELINE" id="career" />
+        <SectionHead num="00" title="" accent="TIMELINE" id="career" />
         <div className="reveal pl-10 relative pb-30" style={{ paddingBottom: "120px" }}>
           <div
             className="absolute left-0 top-0 bottom-0 w-px"
@@ -751,7 +751,7 @@ const Index = () => {
         </div>
 
         {/* PROJECTS */}
-        <SectionHead num="01" title="KEY" accent="PROJECTS" id="projects" />
+        <SectionHead num="01" title="" accent="PROJECTS" id="projects" />
         <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", border: "1px solid hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {PROJECTS.map((p) => (
             <div key={p.num} className="cyber-card p-9 px-9 py-11 relative" style={{ padding: "44px 36px" }}>
@@ -794,7 +794,7 @@ const Index = () => {
         </div>
 
         {/* SKILLS */}
-        <SectionHead num="02" title="TECHNICAL" accent="SKILLS" id="skills" />
+        <SectionHead num="02" title="" accent="SKILLS" id="skills" />
         <div className="reveal grid md:grid-cols-2 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {SKILLS.map((s) => (
             <div key={s.label} className="cyber-card p-9" style={{ padding: "36px" }}>
@@ -946,7 +946,7 @@ const Index = () => {
         </div>
 
         {/* CONTACT */}
-        <SectionHead num="06" title="GET IN" accent="TOUCH" id="contact" />
+        <SectionHead num="06" title="" accent="CONTACT" id="contact" />
         <div className="reveal cyber-card relative overflow-hidden text-center" style={{ padding: "80px 60px", marginBottom: "120px" }}>
           <div
             className="absolute rounded-full pointer-events-none"
