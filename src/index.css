@@ -51,9 +51,9 @@
     --gradient-line: linear-gradient(to right, hsl(var(--cyber-cyan) / 0.3), transparent);
     --gradient-accent: linear-gradient(to right, hsl(var(--cyber-cyan)), hsl(var(--cyber-purple)), transparent);
 
-    --font-display: 'Space Grotesk', 'Inter', sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Sora', 'Inter', sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
   }
 }
 
@@ -155,9 +155,43 @@
 }
 .glitch { animation: glitch 6s infinite; }
 
-/* Reveal */
-.reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* 3D scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: perspective(1200px) translateY(80px) translateZ(-120px) rotateX(18deg);
+  transform-origin: 50% 100%;
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: perspective(1200px) translateY(0) translateZ(0) rotateX(0deg);
+}
+
+/* 3D heading hover-pop */
+.head-3d {
+  display: inline-block;
+  transform-style: preserve-3d;
+  text-shadow:
+    0 1px 0 hsl(165 85% 48% / 0.35),
+    0 2px 0 hsl(165 85% 48% / 0.28),
+    0 3px 0 hsl(165 85% 48% / 0.22),
+    0 4px 0 hsl(165 85% 48% / 0.16),
+    0 5px 0 hsl(165 85% 48% / 0.12),
+    0 6px 0 hsl(165 85% 48% / 0.08),
+    0 8px 18px hsl(165 85% 48% / 0.35),
+    0 0 40px hsl(165 85% 48% / 0.15);
+}
+.head-3d-accent {
+  display: inline-block;
+  text-shadow:
+    0 1px 0 hsl(38 95% 58% / 0.35),
+    0 2px 0 hsl(38 95% 58% / 0.28),
+    0 3px 0 hsl(38 95% 58% / 0.22),
+    0 4px 0 hsl(38 95% 58% / 0.16),
+    0 5px 0 hsl(38 95% 58% / 0.12),
+    0 8px 18px hsl(38 95% 58% / 0.3);
+}
 
 /* Cards */
 .cyber-card {
