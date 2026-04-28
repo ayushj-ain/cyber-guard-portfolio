@@ -642,7 +642,7 @@ const Index = () => {
         <div className="reveal cyber-card pb-30" style={{ padding: "56px", marginBottom: "120px" }}>
           <div className="font-display text-[1.5rem] font-black text-white tracking-[-0.02em] mb-2.5">Cybersecurity Analyst Intern</div>
           <div className="font-body font-bold text-base tracking-[0.12em] text-cyber-cyan uppercase mb-1.5">Deloitte Australia — Virtual Cyber Job Simulation</div>
-          <div className="font-mono-cyber text-[1.05rem] tracking-[0.1em] mb-10" style={{ color: "hsl(195 40% 70% / 0.45)" }}>2024 &nbsp;//&nbsp; Simulated Enterprise Engagement</div>
+          <div className="font-mono-cyber text-[0.85rem] tracking-[0.25em] mb-10 uppercase" style={{ color: "hsl(195 40% 70% / 0.5)" }}>2024 &nbsp;·&nbsp; Simulated Enterprise Engagement</div>
           <ul className="list-none flex flex-col gap-4">
             {[
               <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
