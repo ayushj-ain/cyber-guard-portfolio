@@ -68,20 +68,20 @@ const PROJECTS = [
 
 const SKILLS = [
   {
-    label: "SOC & Detection",
-    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "IOC Investigation", "Threat Hunting"],
+    label: "SOC & Defensive Ops",
+    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response"],
+  },
+  {
+    label: "Ethical Hacking & Offense",
+    chips: ["Ethical Hacking", "Penetration Testing", "Vulnerability Exploitation", "Burp Suite", "Metasploit", "Nmap", "Wireshark", "Recon"],
   },
   {
     label: "Frameworks & Standards",
-    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61"],
+    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61", "Cyber Kill Chain"],
   },
   {
     label: "Tools & Scripting",
-    chips: ["Python", "SQL", "Bash", "Nmap", "Wireshark", "Burp Suite", "Git", "GitHub"],
-  },
-  {
-    label: "Security Domains",
-    chips: ["Incident Response", "Vuln Assessment", "SQL Injection", "Network Security", "IDS / IPS", "Linux / Unix"],
+    chips: ["Python", "Bash", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
   },
 ];
 
