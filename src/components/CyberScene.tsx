@@ -14,19 +14,19 @@ const Core = () => {
       {/* Inner solid icosahedron */}
       <Icosahedron args={[0.9, 1]}>
         <meshStandardMaterial
-          color="#00ffe7"
-          emissive="#00ffe7"
+          color="#10D9A4"
+          emissive="#10D9A4"
           emissiveIntensity={0.6}
           wireframe
         />
       </Icosahedron>
       {/* Outer wireframe shell */}
       <Icosahedron args={[1.6, 1]}>
-        <meshBasicMaterial color="#00ffe7" wireframe transparent opacity={0.35} />
+        <meshBasicMaterial color="#10D9A4" wireframe transparent opacity={0.35} />
       </Icosahedron>
       {/* Red secondary shell */}
       <Icosahedron args={[2.2, 0]}>
-        <meshBasicMaterial color="#ff003c" wireframe transparent opacity={0.18} />
+        <meshBasicMaterial color="#F4A53C" wireframe transparent opacity={0.18} />
       </Icosahedron>
     </group>
   );
@@ -81,7 +81,7 @@ const Particles = () => {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.025} color="#00ffe7" transparent opacity={0.7} />
+      <pointsMaterial size={0.025} color="#10D9A4" transparent opacity={0.7} />
     </points>
   );
 };
@@ -95,17 +95,17 @@ export const CyberScene = () => {
     >
       <Suspense fallback={null}>
         <ambientLight intensity={0.3} />
-        <pointLight position={[5, 5, 5]} color="#00ffe7" intensity={2} />
-        <pointLight position={[-5, -3, -5]} color="#ff003c" intensity={1.5} />
-        <pointLight position={[0, 5, -3]} color="#7000ff" intensity={1} />
+        <pointLight position={[5, 5, 5]} color="#10D9A4" intensity={2} />
+        <pointLight position={[-5, -3, -5]} color="#F4A53C" intensity={1.5} />
+        <pointLight position={[0, 5, -3]} color="#8B7FE8" intensity={1} />
 
         <Float speed={1.2} rotationIntensity={0.4} floatIntensity={0.5}>
           <Core />
         </Float>
 
-        <OrbitRing radius={2.6} speed={0.4} color="#00ffe7" tilt={[Math.PI / 3, 0, 0]} />
-        <OrbitRing radius={2.9} speed={-0.3} color="#ff003c" tilt={[Math.PI / 4, Math.PI / 4, 0]} />
-        <OrbitRing radius={3.2} speed={0.2} color="#7000ff" tilt={[0, Math.PI / 3, Math.PI / 4]} />
+        <OrbitRing radius={2.6} speed={0.4} color="#10D9A4" tilt={[Math.PI / 3, 0, 0]} />
+        <OrbitRing radius={2.9} speed={-0.3} color="#F4A53C" tilt={[Math.PI / 4, Math.PI / 4, 0]} />
+        <OrbitRing radius={3.2} speed={0.2} color="#8B7FE8" tilt={[0, Math.PI / 3, Math.PI / 4]} />
 
         <Particles />
         <Stars radius={50} depth={30} count={1500} factor={2} fade speed={0.5} />
