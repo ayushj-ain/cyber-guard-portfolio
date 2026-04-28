@@ -189,8 +189,8 @@ const Index = () => {
           background: "hsl(200 100% 1.5% / 0.88)",
         }}
       >
-        <div className="font-display text-[0.85rem] font-black tracking-[0.25em] text-cyber-cyan text-glow-cyan">
-          AJ<span className="text-cyber-red not-italic">::</span>CYBER
+        <div className="font-display text-[0.95rem] font-bold tracking-[0.22em] text-cyber-cyan text-glow-cyan">
+          AYUSH JAIN
         </div>
         <div className="hidden md:flex gap-9">
           {NAV_LINKS.map((l) => (
@@ -287,27 +287,26 @@ const Index = () => {
                 pointerEvents: currentSlide === 0 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.4rem] text-cyber-red tracking-[0.3em] mb-6 text-glow-red">
-                // CYBERSECURITY ANALYST &nbsp;·&nbsp; SOC SPECIALIST
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Cybersecurity Analyst &nbsp;·&nbsp; SOC Specialist
               </div>
               <h1
-                className="font-display font-black leading-[0.9] glitch"
+                className="font-display font-bold leading-[0.95]"
                 style={{
-                  fontSize: "clamp(4rem, 12vw, 11rem)",
+                  fontSize: "clamp(3.5rem, 11vw, 10rem)",
                   letterSpacing: "-0.04em",
                   color: "#fff",
-                  textShadow: "0 0 80px hsl(174 100% 50% / 0.15)",
+                  textShadow: "0 0 80px hsl(165 85% 48% / 0.18)",
                 }}
               >
-                <span className="stroke-cyan">AYU</span>
-                <span>SH</span>
+                <span className="text-white">Ayush</span>
                 <br />
-                <span>JAI</span>
-                <span className="stroke-red">N</span>
+                <span className="stroke-cyan">Jain.</span>
               </h1>
               <div
-                className="font-display tracking-[0.3em] text-cyber-cyan mt-4"
-                style={{ fontSize: "clamp(0.75rem, 1.5vw, 1.1rem)", opacity: 0.7 }}
+                className="font-body tracking-[0.18em] text-cyber-cyan mt-6 uppercase font-medium"
+                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.8 }}
               >
                 Threat Detection &nbsp;·&nbsp; Incident Response &nbsp;·&nbsp; Vulnerability Assessment
               </div>
@@ -325,21 +324,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 1 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.6rem] text-cyber-cyan tracking-[0.2em] mb-8 text-glow-cyan">
-                // CREDENTIALS
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-cyan tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Credentials
               </div>
               <h2
-                className="font-display font-black mb-8"
+                className="font-display font-bold mb-8"
                 style={{
-                  fontSize: "clamp(2.5rem, 7vw, 6rem)",
+                  fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
                   color: "#fff",
-                  lineHeight: 0.95,
-                  letterSpacing: "-0.03em",
+                  lineHeight: 1,
+                  letterSpacing: "-0.035em",
                 }}
               >
-                EC-COUNCIL <span className="text-cyber-cyan">CSA</span>
+                EC-Council <span className="text-cyber-cyan">CSA</span>
                 <br />
-                CERTIFIED.
+                Certified.
               </h2>
               <p
                 className="font-body max-w-[560px] leading-[1.7] border-l-2 pl-5"
@@ -365,21 +365,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 2 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.6rem] text-cyber-red tracking-[0.2em] mb-8 text-glow-red">
-                // SPECIALIZATION
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Specialization
               </div>
               <h2
-                className="font-display font-black mb-8"
+                className="font-display font-bold mb-8"
                 style={{
-                  fontSize: "clamp(2rem, 6vw, 5rem)",
+                  fontSize: "clamp(2rem, 6vw, 4.8rem)",
                   color: "#fff",
-                  lineHeight: 1,
-                  letterSpacing: "-0.03em",
+                  lineHeight: 1.05,
+                  letterSpacing: "-0.035em",
                 }}
               >
-                BUILT FOR
+                Built for
                 <br />
-                <span className="stroke-red">DEFENSE.</span>
+                <span className="stroke-red">Defense.</span>
               </h2>
               <div className="flex gap-3 flex-wrap">
                 {["SIEM Monitoring", "SQL Injection Detection", "Incident Response", "Threat Hunting", "Log Correlation"].map((c) => (
@@ -406,21 +407,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 3 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.4rem] text-cyber-orange tracking-[0.2em] mb-8">
-                // LET'S CONNECT
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-orange tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Let's Connect
               </div>
               <h2
-                className="font-display font-black mb-12"
+                className="font-display font-bold mb-12"
                 style={{
-                  fontSize: "clamp(2.5rem, 7vw, 6.5rem)",
-                  lineHeight: 0.95,
+                  fontSize: "clamp(2.5rem, 7vw, 6rem)",
+                  lineHeight: 1,
                   letterSpacing: "-0.04em",
                   color: "#fff",
                 }}
               >
-                <span className="stroke-cyan">HIRE</span>
+                <span className="stroke-cyan">Hire</span>
                 <br />
-                ME.
+                Me.
               </h2>
               <div className="flex flex-wrap gap-0 mb-12">
                 {[
@@ -456,9 +458,9 @@ const Index = () => {
                 ))}
               </div>
               <div className="flex gap-4 flex-wrap">
-                <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-primary">↗ Hire Me</a>
-                <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⬢ GitHub</a>
-                <a href="https://linkedin.com/in/ayushjain-388092371" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-red">⇗ LinkedIn</a>
+                <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-primary">→ Hire Me</a>
+                <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">GitHub</a>
+                <a href="https://www.linkedin.com/in/ayush-jain-388092371/" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-amber">LinkedIn</a>
               </div>
             </div>
           </div>
@@ -502,12 +504,12 @@ const Index = () => {
           box-shadow: var(--glow-cyan);
           transform: translateY(-2px);
         }
-        .cyber-btn-red {
+        .cyber-btn-amber {
           background: transparent;
           color: hsl(var(--cyber-red));
-          border-color: hsl(348 100% 50% / 0.4);
+          border-color: hsl(38 95% 58% / 0.45);
         }
-        .cyber-btn-red:hover {
+        .cyber-btn-amber:hover {
           border-color: hsl(var(--cyber-red));
           box-shadow: var(--glow-red);
           transform: translateY(-2px);
@@ -567,7 +569,7 @@ const Index = () => {
               >
                 {p.num}
               </div>
-              <div className="font-mono-cyber text-base text-cyber-red tracking-[0.15em] mb-5">// {p.year}</div>
+              <div className="font-mono-cyber text-xs text-cyber-red tracking-[0.25em] mb-5 uppercase">{p.year}</div>
               <h3 className="font-display text-[0.95rem] font-bold text-white leading-[1.25] mb-5 tracking-[0.02em]">{p.title}</h3>
               <p className="text-[0.9rem] leading-[1.75] mb-7" style={{ color: "hsl(195 40% 70% / 0.6)" }}>{p.desc}</p>
               <div className="flex flex-wrap gap-2 mb-6">
@@ -640,7 +642,7 @@ const Index = () => {
         <div className="reveal cyber-card pb-30" style={{ padding: "56px", marginBottom: "120px" }}>
           <div className="font-display text-[1.5rem] font-black text-white tracking-[-0.02em] mb-2.5">Cybersecurity Analyst Intern</div>
           <div className="font-body font-bold text-base tracking-[0.12em] text-cyber-cyan uppercase mb-1.5">Deloitte Australia — Virtual Cyber Job Simulation</div>
-          <div className="font-mono-cyber text-[1.05rem] tracking-[0.1em] mb-10" style={{ color: "hsl(195 40% 70% / 0.45)" }}>2024 &nbsp;//&nbsp; Simulated Enterprise Engagement</div>
+          <div className="font-mono-cyber text-[0.85rem] tracking-[0.25em] mb-10 uppercase" style={{ color: "hsl(195 40% 70% / 0.5)" }}>2024 &nbsp;·&nbsp; Simulated Enterprise Engagement</div>
           <ul className="list-none flex flex-col gap-4">
             {[
               <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
@@ -656,7 +658,7 @@ const Index = () => {
         </div>
 
         {/* CERTS */}
-        <SectionHead num="04" title="CERTIFI" accent="CATIONS" id="certs" />
+        <SectionHead num="04" title="" accent="CERTIFICATIONS" id="certs" />
         <div className="reveal grid md:grid-cols-3 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {CERTS.map((c) => (
             <div key={c.name} className="cyber-card" style={{ padding: "36px 28px" }}>
@@ -691,7 +693,7 @@ const Index = () => {
         </div>
 
         {/* EDUCATION */}
-        <SectionHead num="05" title="EDUCA" accent="TION" id="education" />
+        <SectionHead num="05" title="" accent="EDUCATION" id="education" />
         <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
           {[
             { deg: "Master of Computer Applications — MCA", school: "Poornima University, Jaipur · Cyber / Electronic Operations & Warfare", year: "AUG 2025 — MAY 2027" },
@@ -740,17 +742,17 @@ const Index = () => {
           </div>
           <div className="flex justify-center gap-5 flex-wrap relative">
             <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-outline">✉ ayushjain100330@gmail.com</a>
-            <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⬢ GitHub</a>
-            <a href="https://linkedin.com/in/ayushjain-388092371" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⇗ LinkedIn</a>
+            <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">GitHub</a>
+            <a href="https://www.linkedin.com/in/ayush-jain-388092371/" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">LinkedIn</a>
           </div>
         </div>
       </div>
 
       <footer
-        className="text-center py-7 font-mono-cyber text-[0.95rem] tracking-[0.18em] border-t relative z-10"
-        style={{ color: "hsl(195 40% 70% / 0.2)", borderColor: "hsl(174 100% 50% / 0.08)" }}
+        className="text-center py-7 font-mono-cyber text-[0.8rem] tracking-[0.25em] border-t relative z-10 uppercase"
+        style={{ color: "hsl(195 40% 70% / 0.35)", borderColor: "hsl(165 85% 48% / 0.08)" }}
       >
-        © 2025 &nbsp;AYUSH JAIN &nbsp;//&nbsp; CYBERSECURITY PORTFOLIO &nbsp;//&nbsp; JAIPUR, RAJASTHAN
+        © 2025 &nbsp;Ayush Jain &nbsp;·&nbsp; Cybersecurity Portfolio &nbsp;·&nbsp; Jaipur, India
       </footer>
     </div>
   );
@@ -758,19 +760,19 @@ const Index = () => {
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
   <div id={id} className="reveal flex items-end gap-6 mb-18 pt-30" style={{ marginBottom: "72px", paddingTop: "120px" }}>
-    <div className="font-mono-cyber leading-none" style={{ fontSize: "4rem", color: "hsl(174 100% 50% / 0.15)" }}>{num}</div>
+    <div className="font-mono-cyber leading-none font-medium" style={{ fontSize: "2.5rem", color: "hsl(165 85% 48% / 0.35)" }}>{num}</div>
     <h2
-      className="font-display font-black"
+      className="font-display font-bold"
       style={{
-        fontSize: "clamp(2rem, 5vw, 3.6rem)",
-        letterSpacing: "-0.03em",
+        fontSize: "clamp(1.8rem, 4.5vw, 3.2rem)",
+        letterSpacing: "-0.035em",
         color: "#fff",
-        textShadow: "0 0 40px hsl(174 100% 50% / 0.1)",
+        textShadow: "0 0 40px hsl(165 85% 48% / 0.12)",
       }}
     >
-      {title} <span className="text-cyber-cyan">{accent}</span>
+      {title && <span>{title} </span>}<span className="text-cyber-cyan">{accent}</span>
     </h2>
-    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(174 100% 50% / 0.3), transparent)" }} />
+    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.4), transparent)" }} />
   </div>
 );
 

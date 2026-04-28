@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    --background: 200 100% 1.5%;
-    --foreground: 195 40% 80%;
+    --background: 222 47% 4%;
+    --foreground: 210 30% 88%;
 
-    --card: 210 80% 3.5%;
-    --card-foreground: 195 40% 85%;
+    --card: 222 40% 7%;
+    --card-foreground: 210 30% 90%;
 
-    --popover: 210 80% 3.5%;
-    --popover-foreground: 195 40% 85%;
+    --popover: 222 40% 7%;
+    --popover-foreground: 210 30% 90%;
 
-    --primary: 174 100% 50%;
-    --primary-foreground: 200 100% 1.5%;
+    --primary: 165 85% 48%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 210 80% 6%;
-    --secondary-foreground: 195 40% 85%;
+    --secondary: 222 35% 10%;
+    --secondary-foreground: 210 30% 90%;
 
-    --muted: 210 50% 8%;
-    --muted-foreground: 195 25% 55%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 60%;
 
-    --accent: 348 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 38 95% 58%;
+    --accent-foreground: 222 47% 4%;
 
-    --destructive: 348 100% 50%;
+    --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 174 100% 50% / 0.12;
-    --input: 174 100% 50% / 0.18;
-    --ring: 174 100% 50%;
+    --border: 165 85% 48% / 0.14;
+    --input: 165 85% 48% / 0.2;
+    --ring: 165 85% 48%;
 
-    --radius: 0.25rem;
+    --radius: 0.375rem;
 
-    /* Cyber tokens */
-    --void: 200 100% 1.5%;
-    --deep: 210 80% 3.5%;
-    --cyber-cyan: 174 100% 50%;
-    --cyber-red: 348 100% 50%;
-    --cyber-purple: 268 100% 50%;
-    --cyber-orange: 33 100% 50%;
+    /* Cyber tokens — refined palette: deep navy + teal + warm amber */
+    --void: 222 47% 4%;
+    --deep: 222 40% 7%;
+    --cyber-cyan: 165 85% 48%;
+    --cyber-red: 38 95% 58%;
+    --cyber-purple: 250 70% 65%;
+    --cyber-orange: 25 90% 60%;
 
-    --glow-cyan: 0 0 20px hsl(174 100% 50% / 0.6), 0 0 60px hsl(174 100% 50% / 0.2);
-    --glow-red: 0 0 20px hsl(348 100% 50% / 0.6), 0 0 60px hsl(348 100% 50% / 0.2);
-    --glow-purple: 0 0 20px hsl(268 100% 50% / 0.6), 0 0 60px hsl(268 100% 50% / 0.2);
+    --glow-cyan: 0 0 20px hsl(165 85% 48% / 0.55), 0 0 60px hsl(165 85% 48% / 0.18);
+    --glow-red: 0 0 20px hsl(38 95% 58% / 0.5), 0 0 60px hsl(38 95% 58% / 0.18);
+    --glow-purple: 0 0 20px hsl(250 70% 65% / 0.55), 0 0 60px hsl(250 70% 65% / 0.18);
 
     --gradient-line: linear-gradient(to right, hsl(var(--cyber-cyan) / 0.3), transparent);
     --gradient-accent: linear-gradient(to right, hsl(var(--cyber-cyan)), hsl(var(--cyber-purple)), transparent);
 
-    --font-display: 'Orbitron', monospace;
-    --font-body: 'Rajdhani', sans-serif;
-    --font-mono: 'VT323', monospace;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
   }
 }
 
 @layer base {
   * {
-    border-color: hsl(174 100% 50% / 0.12);
+    border-color: hsl(165 85% 48% / 0.12);
   }
 
   html { scroll-behavior: smooth; }
