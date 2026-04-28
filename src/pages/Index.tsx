@@ -17,7 +17,7 @@ const PROJECTS = [
     num: "01",
     year: "2024",
     title: "SOC Monitoring & Alert Triage Lab",
-    desc: "End-to-end SOC simulation built on Splunk + ELK Stack. Investigated 50+ enterprise-grade security alerts achieving a 95% accurate triage rate. Correlated logs across network, endpoint, and cloud telemetry to detect 10 distinct attack patterns including spear phishing, credential brute-force, lateral movement, and DNS exfiltration. Authored runbooks aligned to NIST SP 800-61.",
+    desc: "End-to-end SOC simulation built on Splunk + ELK Stack. Investigated 50+ enterprise-grade security alerts achieving a 95% accurate triage rate. Correlated logs across network, endpoint, and cloud telemetry to detect 10 distinct attack patterns including spear phishing, credential brute-force, lateral movement, and DNS exfiltration. Authored runbooks aligned to NIST SP 800-61 with severity scoring and escalation matrices.",
     tags: [
       { label: "SIEM", v: "" },
       { label: "Splunk", v: "" },
@@ -34,7 +34,7 @@ const PROJECTS = [
     num: "02",
     year: "2024",
     title: "Ethical Hacking — SQL Injection Assessment Pipeline",
-    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
+    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021 with full remediation guidance.",
     tags: [
       { label: "Ethical Hacking", v: "r" },
       { label: "Burp Suite", v: "" },
@@ -51,7 +51,7 @@ const PROJECTS = [
     num: "03",
     year: "2023",
     title: "Threat Intelligence & Ransomware IR Simulation",
-    desc: "Architected and executed a full-kill-chain ransomware incident response playbook covering all 6 NIST IR phases (Prep → Lessons Learned). Parsed 5,000+ firewall and Snort IDS log entries with Bash + Python scripts to extract IOCs, build a MITRE ATT&CK mapping (T1486, T1027, T1059), and produce an executive after-action report. Investigation time cut by 40%.",
+    desc: "Architected and executed a full-kill-chain ransomware incident response playbook covering all 6 NIST IR phases (Prep → Lessons Learned). Parsed 5,000+ firewall and Snort IDS log entries with Bash + Python scripts to extract IOCs, build a MITRE ATT&CK mapping (T1486, T1027, T1059), and produce an executive after-action report. Investigation cycle time cut by 40%.",
     tags: [
       { label: "Ransomware IR", v: "r" },
       { label: "MITRE ATT&CK", v: "" },
@@ -64,24 +64,83 @@ const PROJECTS = [
       "40% faster investigation cycle time",
     ],
   },
+  {
+    num: "04",
+    year: "2025",
+    title: "HackZero'26 CTF — Web & Crypto Challenge Solver",
+    desc: "Competed in the HackZero'26 Capture The Flag tournament across Web, Crypto, Forensics, and Reverse Engineering categories. Solved 12 challenges including JWT token forgery, blind XSS exploitation, RSA weak-key recovery, and PCAP forensics. Documented every exploit chain with reproducible payloads and writeups published to GitHub for the security community.",
+    tags: [
+      { label: "CTF", v: "r" },
+      { label: "Web Exploitation", v: "" },
+      { label: "Cryptography", v: "" },
+      { label: "Forensics", v: "v" },
+    ],
+    metrics: [
+      "12 challenges solved across 4 categories",
+      "Reproducible exploit writeups on GitHub",
+      "JWT, RSA, XSS & PCAP exploit chains",
+    ],
+  },
+  {
+    num: "05",
+    year: "2025",
+    title: "Phishing Email Analyzer & Threat Triage Tool",
+    desc: "Built a Python-based phishing email forensic analyzer that parses raw .eml files, extracts SPF/DKIM/DMARC verdicts, decodes obfuscated URLs, performs WHOIS + VirusTotal IOC lookups, and outputs a SOC-ready triage report in JSON. Reduced analyst time-per-email from 8 minutes to under 90 seconds across a 200-email test corpus.",
+    tags: [
+      { label: "Phishing", v: "r" },
+      { label: "Python", v: "" },
+      { label: "Threat Intel", v: "" },
+      { label: "Automation", v: "v" },
+    ],
+    metrics: [
+      "200-email test corpus, 92% true-positive rate",
+      "Time-per-email cut from 8 min → 90 sec",
+      "SPF / DKIM / DMARC + VirusTotal integration",
+    ],
+  },
+  {
+    num: "06",
+    year: "2025",
+    title: "Network Traffic Anomaly Detector (Wireshark + Python)",
+    desc: "Engineered a network anomaly detection toolkit that ingests live PCAP captures via Scapy + tshark, baselines normal traffic with statistical profiling, and flags suspicious indicators: port scans, DNS tunneling, beaconing C2 traffic, and ARP spoofing. Tested against 6 simulated attack scenarios in an isolated lab with a custom dashboard for visualization.",
+    tags: [
+      { label: "Network Security", v: "r" },
+      { label: "Wireshark", v: "" },
+      { label: "Scapy", v: "" },
+      { label: "Anomaly Detection", v: "v" },
+    ],
+    metrics: [
+      "6 attack scenarios validated end-to-end",
+      "Live PCAP ingestion via Scapy + tshark",
+      "Detects C2 beaconing, scans, DNS tunneling",
+    ],
+  },
 ];
 
 const SKILLS = [
   {
     label: "SOC & Defensive Ops",
-    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response"],
+    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response", "IOC Investigation"],
   },
   {
     label: "Ethical Hacking & Offense",
-    chips: ["Ethical Hacking", "Penetration Testing", "Vulnerability Exploitation", "Burp Suite", "Metasploit", "Nmap", "Wireshark", "Recon"],
+    chips: ["Ethical Hacking", "Penetration Testing", "VAPT", "Burp Suite", "Metasploit", "Nmap", "OWASP Top 10", "Recon", "CTF Player"],
+  },
+  {
+    label: "Network & Forensics",
+    chips: ["Wireshark", "Scapy", "tshark", "PCAP Analysis", "TCP/IP", "DNS / HTTP", "Firewall Rules", "IDS / IPS"],
   },
   {
     label: "Frameworks & Standards",
-    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61", "Cyber Kill Chain"],
+    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "NIST SP 800-61", "Cyber Kill Chain"],
   },
   {
-    label: "Tools & Scripting",
-    chips: ["Python", "Bash", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
+    label: "Scripting & Tooling",
+    chips: ["Python", "Bash", "Shell Scripting", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
+  },
+  {
+    label: "Soft Skills",
+    chips: ["Incident Documentation", "Threat Reporting", "Stakeholder Comms", "Analytical Thinking", "Crisis Response"],
   },
 ];
 
@@ -94,6 +153,20 @@ const CERTS = [
     href: undefined as string | undefined,
   },
   {
+    icon: "🚩",
+    name: "HackZero'26 CTF — Certificate of Participation",
+    body: "Competed in HackZero'26 Capture The Flag, solving challenges across Web Exploitation, Cryptography, Forensics, and Reverse Engineering with full writeups.",
+    badge: "HackZero'26",
+    href: undefined as string | undefined,
+  },
+  {
+    icon: "🎯",
+    name: "Social Engineering Defence Certified",
+    body: "Trained in identifying and defending against social engineering vectors: phishing, vishing, pretexting, baiting, and impersonation. Awareness program completion.",
+    badge: "SE Defence",
+    href: undefined as string | undefined,
+  },
+  {
     icon: "🔎",
     name: "Deloitte Australia Cyber Job Simulation",
     body: "Completed Deloitte's simulated consulting engagement: threat intelligence analysis, security risk reporting, and structured client advisory documentation.",
@@ -101,11 +174,18 @@ const CERTS = [
     href: undefined as string | undefined,
   },
   {
-    icon: "⬢",
+    icon: "🐙",
     name: "GitHub — Open Security Tooling",
-    body: "Active on GitHub publishing detection scripts, IR playbooks, and vulnerability assessment utilities. Hands-on contributor to defensive security tooling.",
-    badge: "↗ View GitHub",
+    body: "Active on GitHub publishing detection scripts, IR playbooks, phishing analyzers, and CTF writeups. Hands-on contributor to defensive security tooling.",
+    badge: "View GitHub →",
     href: "https://github.com/Ayushjain1030",
+  },
+  {
+    icon: "🎓",
+    name: "MCA — Cyber / Electronic Operations & Warfare",
+    body: "Pursuing Master of Computer Applications at Poornima University with specialization in offensive and defensive cybersecurity, electronic warfare, and threat ops.",
+    badge: "Poornima Univ.",
+    href: undefined as string | undefined,
   },
 ];
 
@@ -174,80 +254,87 @@ const Index = () => {
       <div className="noise" />
 
       {/* Corners */}
-      <div className="fixed top-[72px] left-0 w-10 h-10 border-t border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed top-[72px] right-0 w-10 h-10 border-t border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed bottom-0 left-0 w-10 h-10 border-b border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed bottom-0 right-0 w-10 h-10 border-b border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
+      <div className="fixed top-[72px] left-0 w-10 h-10 border-t border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed top-[72px] right-0 w-10 h-10 border-t border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed bottom-0 left-0 w-10 h-10 border-b border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed bottom-0 right-0 w-10 h-10 border-b border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
 
       {/* NAV */}
       <nav
-        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-between border-b backdrop-blur-xl px-6 md:px-15"
+        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-between border-b backdrop-blur-xl"
         style={{
-          paddingLeft: "60px",
-          paddingRight: "60px",
-          borderColor: "hsl(174 100% 50% / 0.12)",
-          background: "hsl(200 100% 1.5% / 0.88)",
+          paddingLeft: "clamp(20px, 5vw, 60px)",
+          paddingRight: "clamp(20px, 5vw, 60px)",
+          borderColor: "hsl(165 85% 48% / 0.12)",
+          background: "hsl(222 47% 4% / 0.85)",
         }}
       >
-        <div className="font-display text-[0.95rem] font-bold tracking-[0.22em] text-cyber-cyan text-glow-cyan">
-          AYUSH JAIN
-        </div>
-        <div className="hidden md:flex gap-9">
+        {/* Monogram logo */}
+        <a href="#top" className="flex items-center gap-3 no-underline group">
+          <div
+            className="flex items-center justify-center w-9 h-9 border font-display font-bold text-[0.85rem] tracking-tight transition-all"
+            style={{
+              borderColor: "hsl(165 85% 48% / 0.5)",
+              color: "hsl(var(--cyber-cyan))",
+              background: "hsl(165 85% 48% / 0.08)",
+            }}
+          >
+            AJ
+          </div>
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="font-display text-[0.7rem] font-semibold tracking-[0.18em] uppercase text-white">
+              Ayush Jain
+            </span>
+            <span className="font-mono-cyber text-[0.6rem] tracking-[0.22em] uppercase" style={{ color: "hsl(195 25% 65% / 0.55)" }}>
+              SOC · Ethical Hacker
+            </span>
+          </div>
+        </a>
+
+        {/* Center nav */}
+        <div className="hidden md:flex gap-7 lg:gap-9 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="font-body font-semibold text-[0.78rem] tracking-[0.18em] uppercase no-underline transition-colors"
-              style={{ color: "hsl(195 40% 70% / 0.5)" }}
+              className="font-body font-semibold text-[0.72rem] tracking-[0.2em] uppercase no-underline transition-colors relative"
+              style={{ color: "hsl(195 25% 65% / 0.55)" }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.color = "hsl(var(--cyber-cyan))";
-                (e.currentTarget as HTMLElement).style.textShadow = "0 0 20px hsl(174 100% 50% / 0.6)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "hsl(195 40% 70% / 0.5)";
-                (e.currentTarget as HTMLElement).style.textShadow = "none";
+                (e.currentTarget as HTMLElement).style.color = "hsl(195 25% 65% / 0.55)";
               }}
             >
               {l.label}
             </a>
           ))}
         </div>
-        <div className="flex items-center gap-4">
-          <div
-            className="hidden sm:flex items-center gap-2 py-1.5 px-3 rounded-full border"
-            style={{
-              borderColor: "hsl(165 85% 48% / 0.25)",
-              background: "hsl(165 85% 48% / 0.06)",
-            }}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(165 85% 48% / 0.55)" }} />
-              <span className="relative rounded-full h-2 w-2" style={{ background: "hsl(var(--cyber-cyan))" }} />
-            </span>
-            <span className="font-body font-semibold text-[0.65rem] tracking-[0.2em] uppercase text-cyber-cyan">
-              Open to Work
-            </span>
-          </div>
-          <a
-            href="#contact"
-            className="hidden md:inline-flex font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
-            style={{
-              background: "hsl(var(--cyber-cyan))",
-              color: "hsl(var(--void))",
-              boxShadow: "0 0 20px hsl(165 85% 48% / 0.35)",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px hsl(165 85% 48% / 0.6)";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px hsl(165 85% 48% / 0.35)";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-            }}
-          >
-            Hire Me →
-          </a>
-        </div>
+
+        {/* CTA */}
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
+          style={{
+            background: "hsl(var(--cyber-cyan))",
+            color: "hsl(var(--void))",
+            boxShadow: "0 0 24px hsl(165 85% 48% / 0.4)",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 36px hsl(165 85% 48% / 0.7)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px hsl(165 85% 48% / 0.4)";
+            (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+          }}
+        >
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(var(--void) / 0.6)" }} />
+            <span className="relative rounded-full h-1.5 w-1.5" style={{ background: "hsl(var(--void))" }} />
+          </span>
+          Hire Me
+        </a>
       </nav>
 
       {/* Scroll progress dots */}
@@ -259,7 +346,7 @@ const Index = () => {
             onClick={() => goToSlide(i)}
             className="interactive w-1.5 h-1.5 rounded-full transition-all cursor-pointer border-0"
             style={{
-              background: i === currentSlide ? "hsl(var(--cyber-cyan))" : "hsl(174 100% 50% / 0.2)",
+              background: i === currentSlide ? "hsl(var(--cyber-cyan))" : "hsl(165 85% 48% / 0.2)",
               boxShadow: i === currentSlide ? "var(--glow-cyan)" : "none",
             }}
           />
@@ -492,7 +579,7 @@ const Index = () => {
                   <span
                     key={c}
                     className="font-body font-bold text-[0.85rem] tracking-[0.12em] py-2.5 px-5 uppercase border text-cyber-red"
-                    style={{ borderColor: "hsl(348 100% 50% / 0.3)" }}
+                    style={{ borderColor: "hsl(38 95% 58% / 0.3)" }}
                   >
                     {c}
                   </span>
@@ -540,7 +627,7 @@ const Index = () => {
                     key={s.l}
                     className="py-5 pr-9 mr-9"
                     style={{
-                      borderRight: i < arr.length - 1 ? "1px solid hsl(174 100% 50% / 0.15)" : "none",
+                      borderRight: i < arr.length - 1 ? "1px solid hsl(165 85% 48% / 0.15)" : "none",
                     }}
                   >
                     <div
@@ -602,7 +689,7 @@ const Index = () => {
         .cyber-btn-outline {
           background: transparent;
           color: hsl(var(--cyber-cyan));
-          border-color: hsl(174 100% 50% / 0.4);
+          border-color: hsl(165 85% 48% / 0.4);
         }
         .cyber-btn-outline:hover {
           border-color: hsl(var(--cyber-cyan));
@@ -624,11 +711,11 @@ const Index = () => {
       {/* SECTIONS */}
       <div className="relative z-10 max-w-[1160px] mx-auto px-6 md:px-15" style={{ paddingLeft: "clamp(24px, 5vw, 60px)", paddingRight: "clamp(24px, 5vw, 60px)" }}>
         {/* CAREER */}
-        <SectionHead num="00" title="CAREER" accent="TIMELINE" id="career" />
+        <SectionHead num="00" title="" accent="TIMELINE" id="career" />
         <div className="reveal pl-10 relative pb-30" style={{ paddingBottom: "120px" }}>
           <div
             className="absolute left-0 top-0 bottom-0 w-px"
-            style={{ background: "linear-gradient(to bottom, hsl(174 100% 50% / 0.4), hsl(174 100% 50% / 0.05))" }}
+            style={{ background: "linear-gradient(to bottom, hsl(165 85% 48% / 0.4), hsl(165 85% 48% / 0.05))" }}
           />
           {[
             {
@@ -664,13 +751,13 @@ const Index = () => {
         </div>
 
         {/* PROJECTS */}
-        <SectionHead num="01" title="KEY" accent="PROJECTS" id="projects" />
-        <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", border: "1px solid hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
+        <SectionHead num="01" title="" accent="PROJECTS" id="projects" />
+        <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", border: "1px solid hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {PROJECTS.map((p) => (
             <div key={p.num} className="cyber-card p-9 px-9 py-11 relative" style={{ padding: "44px 36px" }}>
               <div
                 className="absolute top-3 right-5 font-mono-cyber leading-none select-none pointer-events-none"
-                style={{ fontSize: "5rem", color: "hsl(174 100% 50% / 0.05)" }}
+                style={{ fontSize: "5rem", color: "hsl(165 85% 48% / 0.05)" }}
               >
                 {p.num}
               </div>
@@ -684,10 +771,10 @@ const Index = () => {
                     className="font-body font-semibold text-[0.63rem] tracking-[0.15em] uppercase py-1 px-3 border"
                     style={
                       t.v === "r"
-                        ? { borderColor: "hsl(348 100% 50% / 0.25)", color: "hsl(var(--cyber-red))", background: "hsl(348 100% 50% / 0.04)" }
+                        ? { borderColor: "hsl(38 95% 58% / 0.25)", color: "hsl(var(--cyber-red))", background: "hsl(38 95% 58% / 0.04)" }
                         : t.v === "v"
-                        ? { borderColor: "hsl(268 100% 50% / 0.3)", color: "hsl(268 100% 70%)", background: "hsl(268 100% 50% / 0.04)" }
-                        : { borderColor: "hsl(174 100% 50% / 0.2)", color: "hsl(var(--cyber-cyan))", background: "hsl(174 100% 50% / 0.04)" }
+                        ? { borderColor: "hsl(250 70% 65% / 0.3)", color: "hsl(250 70% 78%)", background: "hsl(250 70% 65% / 0.04)" }
+                        : { borderColor: "hsl(165 85% 48% / 0.2)", color: "hsl(var(--cyber-cyan))", background: "hsl(165 85% 48% / 0.04)" }
                     }
                   >
                     {t.label}
@@ -696,7 +783,7 @@ const Index = () => {
               </div>
               <div className="flex flex-col gap-2.5">
                 {p.metrics.map((m) => (
-                  <div key={m} className="font-body font-semibold text-[0.8rem] flex items-center gap-2.5" style={{ color: "hsl(174 100% 50% / 0.7)" }}>
+                  <div key={m} className="font-body font-semibold text-[0.8rem] flex items-center gap-2.5" style={{ color: "hsl(165 85% 48% / 0.7)" }}>
                     <span className="inline-block w-5 h-px bg-cyber-cyan" style={{ background: "hsl(var(--cyber-cyan))" }} />
                     {m}
                   </div>
@@ -707,11 +794,11 @@ const Index = () => {
         </div>
 
         {/* SKILLS */}
-        <SectionHead num="02" title="TECHNICAL" accent="SKILLS" id="skills" />
+        <SectionHead num="02" title="" accent="SKILLS" id="skills" />
         <div className="reveal grid md:grid-cols-2 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {SKILLS.map((s) => (
             <div key={s.label} className="cyber-card p-9" style={{ padding: "36px" }}>
-              <div className="font-display text-[0.63rem] font-bold tracking-[0.25em] uppercase text-cyber-cyan mb-6 pb-4 border-b flex items-center gap-3" style={{ borderColor: "hsl(174 100% 50% / 0.1)" }}>
+              <div className="font-display text-[0.63rem] font-bold tracking-[0.25em] uppercase text-cyber-cyan mb-6 pb-4 border-b flex items-center gap-3" style={{ borderColor: "hsl(165 85% 48% / 0.1)" }}>
                 <span className="w-1 h-1 bg-cyber-cyan glow-cyan" style={{ background: "hsl(var(--cyber-cyan))" }} />
                 {s.label}
               </div>
@@ -723,8 +810,8 @@ const Index = () => {
                     style={{ background: "hsl(0 0% 100% / 0.03)", borderColor: "hsl(0 0% 100% / 0.07)", color: "hsl(195 40% 70% / 0.7)" }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.background = "hsl(174 100% 50% / 0.08)";
-                      el.style.borderColor = "hsl(174 100% 50% / 0.35)";
+                      el.style.background = "hsl(165 85% 48% / 0.08)";
+                      el.style.borderColor = "hsl(165 85% 48% / 0.35)";
                       el.style.color = "hsl(var(--cyber-cyan))";
                     }}
                     onMouseLeave={(e) => {
@@ -743,23 +830,66 @@ const Index = () => {
         </div>
 
         {/* EXPERIENCE */}
-        <SectionHead num="03" title="WORK" accent="EXPERIENCE" id="experience" />
-        <div className="reveal cyber-card pb-30" style={{ padding: "56px", marginBottom: "120px" }}>
-          <div className="font-display text-[1.5rem] font-black text-white tracking-[-0.02em] mb-2.5">Cybersecurity Analyst Intern</div>
-          <div className="font-body font-bold text-base tracking-[0.12em] text-cyber-cyan uppercase mb-1.5">Deloitte Australia — Virtual Cyber Job Simulation</div>
-          <div className="font-mono-cyber text-[0.85rem] tracking-[0.25em] mb-10 uppercase" style={{ color: "hsl(195 40% 70% / 0.5)" }}>2024 &nbsp;·&nbsp; Simulated Enterprise Engagement</div>
-          <ul className="list-none flex flex-col gap-4">
-            {[
-              <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
-              <>Produced a structured risk advisory report recommending <strong className="text-white">4 strategic remediation actions</strong>, improving simulated client compliance readiness score by 25%.</>,
-              <>Collaborated asynchronously with a virtual team of <strong className="text-white">8 analysts</strong> to deliver a consolidated threat landscape briefing within a 48-hour deadline.</>,
-            ].map((li, i) => (
-              <li key={i} className="text-base leading-[1.7] pl-7 relative" style={{ color: "hsl(195 40% 70% / 0.75)" }}>
-                <span className="absolute left-0 top-[3px] text-cyber-cyan text-[0.65rem]">▶</span>
-                {li}
-              </li>
-            ))}
-          </ul>
+        <SectionHead num="03" title="" accent="EXPERIENCE" id="experience" />
+        <div className="reveal flex flex-col gap-6" style={{ paddingBottom: "120px" }}>
+          {[
+            {
+              role: "Cybersecurity Analyst Intern",
+              org: "Deloitte Australia — Virtual Cyber Job Simulation",
+              period: "2024 · Simulated Enterprise Engagement",
+              tag: "Internship",
+              points: [
+                <>Assessed security posture of a simulated enterprise client, identifying <strong className="text-white">6 high-priority risks</strong> and mapping findings to ISO 27001 and NIST CSF control families.</>,
+                <>Produced a structured risk advisory report recommending <strong className="text-white">4 strategic remediation actions</strong>, improving simulated client compliance readiness score by 25%.</>,
+                <>Collaborated asynchronously with a virtual team of <strong className="text-white">8 analysts</strong> to deliver a consolidated threat landscape briefing within a 48-hour deadline.</>,
+              ],
+            },
+            {
+              role: "Independent Security Researcher",
+              org: "Self-directed · Open Source & Lab Environments",
+              period: "2023 — Present · Ongoing",
+              tag: "Self-Directed",
+              points: [
+                <>Built and maintained a personal home lab with <strong className="text-white">Splunk, ELK, pfSense, and intentionally vulnerable VMs</strong> (DVWA, Metasploitable, HackTheBox machines) for continuous detection engineering practice.</>,
+                <>Authored <strong className="text-white">6+ open-source security tools</strong> on GitHub including a phishing analyzer, network anomaly detector, and SQLi scanner — combined with full reproducible writeups.</>,
+                <>Active CTF competitor on HackZero, TryHackMe, and HackTheBox — solved <strong className="text-white">12+ multi-category challenges</strong> spanning web, crypto, forensics, and reverse engineering.</>,
+              ],
+            },
+            {
+              role: "Cybersecurity Awareness Volunteer",
+              org: "College Tech Society · Poddar International College",
+              period: "2024 · Workshops & Outreach",
+              tag: "Volunteer",
+              points: [
+                <>Delivered <strong className="text-white">3 hands-on workshops</strong> on phishing recognition, password hygiene, and safe browsing to 80+ students across multiple departments.</>,
+                <>Designed an internal awareness campaign with simulated phishing emails, achieving a measurable <strong className="text-white">35% reduction in click-rate</strong> over a 4-week cycle.</>,
+              ],
+            },
+          ].map((xp) => (
+            <div key={xp.role} className="cyber-card relative" style={{ padding: "44px 48px" }}>
+              <div className="flex items-start justify-between gap-6 mb-6 flex-wrap">
+                <div>
+                  <div className="font-display text-[1.35rem] font-bold text-white tracking-[-0.02em] mb-2">{xp.role}</div>
+                  <div className="font-body font-semibold text-[0.9rem] tracking-[0.1em] text-cyber-cyan uppercase mb-1.5">{xp.org}</div>
+                  <div className="font-mono-cyber text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "hsl(195 25% 65% / 0.5)" }}>{xp.period}</div>
+                </div>
+                <span
+                  className="font-mono-cyber text-[0.65rem] tracking-[0.22em] uppercase py-1 px-3 border whitespace-nowrap"
+                  style={{ color: "hsl(38 95% 58%)", borderColor: "hsl(38 95% 58% / 0.35)", background: "hsl(38 95% 58% / 0.06)" }}
+                >
+                  {xp.tag}
+                </span>
+              </div>
+              <ul className="list-none flex flex-col gap-3.5">
+                {xp.points.map((li, i) => (
+                  <li key={i} className="text-[0.95rem] leading-[1.7] pl-6 relative" style={{ color: "hsl(195 25% 75% / 0.75)" }}>
+                    <span className="absolute left-0 top-[7px] w-2.5 h-px" style={{ background: "hsl(var(--cyber-cyan))" }} />
+                    {li}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* CERTS */}
@@ -769,7 +899,7 @@ const Index = () => {
             <div key={c.name} className="cyber-card" style={{ padding: "36px 28px" }}>
               <div
                 className="w-13 h-13 flex items-center justify-center mb-5 border"
-                style={{ width: "52px", height: "52px", background: "hsl(174 100% 50% / 0.07)", borderColor: "hsl(174 100% 50% / 0.2)", fontSize: "1.5rem" }}
+                style={{ width: "52px", height: "52px", background: "hsl(165 85% 48% / 0.07)", borderColor: "hsl(165 85% 48% / 0.2)", fontSize: "1.5rem" }}
               >
                 {c.icon}
               </div>
@@ -781,14 +911,14 @@ const Index = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 no-underline border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(174 100% 50% / 0.25)" }}
+                  style={{ background: "hsl(165 85% 48% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </a>
               ) : (
                 <span
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(174 100% 50% / 0.25)" }}
+                  style={{ background: "hsl(165 85% 48% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </span>
@@ -799,7 +929,7 @@ const Index = () => {
 
         {/* EDUCATION */}
         <SectionHead num="05" title="" accent="EDUCATION" id="education" />
-        <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
+        <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {[
             { deg: "Master of Computer Applications — MCA", school: "Poornima University, Jaipur · Cyber / Electronic Operations & Warfare", year: "AUG 2025 — MAY 2027" },
             { deg: "Bachelor's Degree — Computer Science", school: "Poddar International College, Jaipur", year: "2023 — 2025" },
@@ -808,7 +938,7 @@ const Index = () => {
               <div className="w-3 h-3 border-2 rounded-full flex-shrink-0" style={{ borderColor: "hsl(var(--cyber-cyan))" }} />
               <div className="flex-1">
                 <div className="font-display font-bold text-base text-white tracking-[-0.01em] mb-1.5">{e.deg}</div>
-                <div className="font-body text-[0.85rem] font-semibold tracking-[0.1em]" style={{ color: "hsl(174 100% 50% / 0.6)" }}>{e.school}</div>
+                <div className="font-body text-[0.85rem] font-semibold tracking-[0.1em]" style={{ color: "hsl(165 85% 48% / 0.6)" }}>{e.school}</div>
               </div>
               <div className="font-mono-cyber text-[1.1rem] whitespace-nowrap tracking-wider ml-auto" style={{ color: "hsl(195 40% 70% / 0.4)" }}>{e.year}</div>
             </div>
@@ -816,14 +946,14 @@ const Index = () => {
         </div>
 
         {/* CONTACT */}
-        <SectionHead num="06" title="GET IN" accent="TOUCH" id="contact" />
+        <SectionHead num="06" title="" accent="CONTACT" id="contact" />
         <div className="reveal cyber-card relative overflow-hidden text-center" style={{ padding: "80px 60px", marginBottom: "120px" }}>
           <div
             className="absolute rounded-full pointer-events-none"
             style={{
               width: "600px",
               height: "600px",
-              background: "radial-gradient(circle, hsl(174 100% 50% / 0.06) 0%, transparent 70%)",
+              background: "radial-gradient(circle, hsl(165 85% 48% / 0.06) 0%, transparent 70%)",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
@@ -835,7 +965,7 @@ const Index = () => {
               fontSize: "clamp(2rem, 5vw, 4rem)",
               letterSpacing: "-0.03em",
               color: "#fff",
-              textShadow: "0 0 60px hsl(174 100% 50% / 0.15)",
+              textShadow: "0 0 60px hsl(165 85% 48% / 0.15)",
             }}
           >
             LET'S <em className="stroke-cyan not-italic">BUILD</em>
@@ -864,20 +994,29 @@ const Index = () => {
 };
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
-  <div id={id} className="reveal flex items-end gap-6 mb-18 pt-30" style={{ marginBottom: "72px", paddingTop: "120px" }}>
-    <div className="font-mono-cyber leading-none font-medium" style={{ fontSize: "2.5rem", color: "hsl(165 85% 48% / 0.35)" }}>{num}</div>
+  <div id={id} className="reveal mb-12" style={{ paddingTop: "120px", marginBottom: "56px" }}>
+    <div className="flex items-center gap-3 mb-4">
+      <span
+        className="font-mono-cyber text-[0.7rem] tracking-[0.32em] uppercase font-medium py-1 px-2.5 border"
+        style={{ color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.3)", background: "hsl(165 85% 48% / 0.05)" }}
+      >
+        Section {num}
+      </span>
+      <span className="flex-1 h-px" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.35), transparent)" }} />
+    </div>
     <h2
-      className="font-display font-bold"
+      className="font-display font-bold flex items-baseline gap-3 flex-wrap"
       style={{
-        fontSize: "clamp(1.8rem, 4.5vw, 3.2rem)",
-        letterSpacing: "-0.035em",
+        fontSize: "clamp(2rem, 5vw, 3.6rem)",
+        letterSpacing: "-0.04em",
         color: "#fff",
         textShadow: "0 0 40px hsl(165 85% 48% / 0.12)",
       }}
     >
-      {title && <span>{title} </span>}<span className="text-cyber-cyan">{accent}</span>
+      {title && <span className="text-white opacity-90">{title}</span>}
+      <span className="text-cyber-cyan">{accent}</span>
+      <span className="text-cyber-red font-display font-bold">.</span>
     </h2>
-    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.4), transparent)" }} />
   </div>
 );
 
