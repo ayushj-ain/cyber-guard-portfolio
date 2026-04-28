@@ -458,9 +458,9 @@ const Index = () => {
                 ))}
               </div>
               <div className="flex gap-4 flex-wrap">
-                <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-primary">↗ Hire Me</a>
-                <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">⬢ GitHub</a>
-                <a href="https://linkedin.com/in/ayushjain-388092371" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-red">⇗ LinkedIn</a>
+                <a href="mailto:ayushjain100330@gmail.com" className="cyber-btn cyber-btn-primary">→ Hire Me</a>
+                <a href="https://github.com/Ayushjain1030" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-outline">GitHub</a>
+                <a href="https://www.linkedin.com/in/ayush-jain-388092371/" target="_blank" rel="noreferrer" className="cyber-btn cyber-btn-amber">LinkedIn</a>
               </div>
             </div>
           </div>
