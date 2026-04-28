@@ -59,7 +59,7 @@
 
 @layer base {
   * {
-    border-color: hsl(174 100% 50% / 0.12);
+    border-color: hsl(165 85% 48% / 0.12);
   }
 
   html { scroll-behavior: smooth; }
