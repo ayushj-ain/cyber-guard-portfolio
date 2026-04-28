@@ -310,6 +310,36 @@ const Index = () => {
               >
                 Threat Detection &nbsp;·&nbsp; Penetration Testing &nbsp;·&nbsp; Incident Response
               </div>
+
+              {/* Hero meta strip */}
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                {[
+                  { l: "EC-Council CSA", c: "cyan" },
+                  { l: "Deloitte Cyber Sim", c: "cyan" },
+                  { l: "MCA · Cyber Warfare", c: "amber" },
+                  { l: "Jaipur, India", c: "muted" },
+                ].map((t) => (
+                  <span
+                    key={t.l}
+                    className="font-mono-cyber text-[0.7rem] tracking-[0.18em] uppercase py-1.5 px-3 border rounded-sm"
+                    style={
+                      t.c === "cyan"
+                        ? { color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.35)", background: "hsl(165 85% 48% / 0.06)" }
+                        : t.c === "amber"
+                        ? { color: "hsl(var(--cyber-red))", borderColor: "hsl(38 95% 58% / 0.35)", background: "hsl(38 95% 58% / 0.06)" }
+                        : { color: "hsl(195 25% 65% / 0.7)", borderColor: "hsl(195 25% 65% / 0.18)", background: "hsl(0 0% 100% / 0.02)" }
+                    }
+                  >
+                    {t.l}
+                  </span>
+                ))}
+              </div>
+
+              {/* Scroll cue */}
+              <div className="mt-10 flex items-center gap-3 font-mono-cyber text-[0.7rem] tracking-[0.3em] uppercase" style={{ color: "hsl(195 25% 65% / 0.45)" }}>
+                <span className="inline-block w-px h-8 animate-pulse" style={{ background: "hsl(165 85% 48% / 0.6)" }} />
+                Scroll to explore
+              </div>
             </div>
 
             {/* Slide 1: Stats */}
