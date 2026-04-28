@@ -749,10 +749,10 @@ const Index = () => {
       </div>
 
       <footer
-        className="text-center py-7 font-mono-cyber text-[0.95rem] tracking-[0.18em] border-t relative z-10"
-        style={{ color: "hsl(195 40% 70% / 0.2)", borderColor: "hsl(174 100% 50% / 0.08)" }}
+        className="text-center py-7 font-mono-cyber text-[0.8rem] tracking-[0.25em] border-t relative z-10 uppercase"
+        style={{ color: "hsl(195 40% 70% / 0.35)", borderColor: "hsl(165 85% 48% / 0.08)" }}
       >
-        © 2025 &nbsp;AYUSH JAIN &nbsp;//&nbsp; CYBERSECURITY PORTFOLIO &nbsp;//&nbsp; JAIPUR, RAJASTHAN
+        © 2025 &nbsp;Ayush Jain &nbsp;·&nbsp; Cybersecurity Portfolio &nbsp;·&nbsp; Jaipur, India
       </footer>
     </div>
   );
