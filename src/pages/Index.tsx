@@ -33,12 +33,12 @@ const PROJECTS = [
   {
     num: "02",
     year: "2024",
-    title: "SQL Injection Vulnerability Assessment Pipeline",
-    desc: "Performed manual + automated SQLi testing on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
+    title: "Ethical Hacking — SQL Injection Assessment Pipeline",
+    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
     tags: [
-      { label: "SQL Injection", v: "r" },
-      { label: "Python", v: "" },
+      { label: "Ethical Hacking", v: "r" },
       { label: "Burp Suite", v: "" },
+      { label: "Python", v: "" },
       { label: "OWASP", v: "" },
     ],
     metrics: [
