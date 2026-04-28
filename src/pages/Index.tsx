@@ -407,21 +407,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 3 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.4rem] text-cyber-orange tracking-[0.2em] mb-8">
-                // LET'S CONNECT
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-orange tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Let's Connect
               </div>
               <h2
-                className="font-display font-black mb-12"
+                className="font-display font-bold mb-12"
                 style={{
-                  fontSize: "clamp(2.5rem, 7vw, 6.5rem)",
-                  lineHeight: 0.95,
+                  fontSize: "clamp(2.5rem, 7vw, 6rem)",
+                  lineHeight: 1,
                   letterSpacing: "-0.04em",
                   color: "#fff",
                 }}
               >
-                <span className="stroke-cyan">HIRE</span>
+                <span className="stroke-cyan">Hire</span>
                 <br />
-                ME.
+                Me.
               </h2>
               <div className="flex flex-wrap gap-0 mb-12">
                 {[
