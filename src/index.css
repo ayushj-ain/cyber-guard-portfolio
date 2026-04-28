@@ -44,16 +44,16 @@
     --cyber-purple: 250 70% 65%;
     --cyber-orange: 25 90% 60%;
 
-    --glow-cyan: 0 0 20px hsl(174 100% 50% / 0.6), 0 0 60px hsl(174 100% 50% / 0.2);
-    --glow-red: 0 0 20px hsl(348 100% 50% / 0.6), 0 0 60px hsl(348 100% 50% / 0.2);
-    --glow-purple: 0 0 20px hsl(268 100% 50% / 0.6), 0 0 60px hsl(268 100% 50% / 0.2);
+    --glow-cyan: 0 0 20px hsl(165 85% 48% / 0.55), 0 0 60px hsl(165 85% 48% / 0.18);
+    --glow-red: 0 0 20px hsl(38 95% 58% / 0.5), 0 0 60px hsl(38 95% 58% / 0.18);
+    --glow-purple: 0 0 20px hsl(250 70% 65% / 0.55), 0 0 60px hsl(250 70% 65% / 0.18);
 
     --gradient-line: linear-gradient(to right, hsl(var(--cyber-cyan) / 0.3), transparent);
     --gradient-accent: linear-gradient(to right, hsl(var(--cyber-cyan)), hsl(var(--cyber-purple)), transparent);
 
-    --font-display: 'Orbitron', monospace;
-    --font-body: 'Rajdhani', sans-serif;
-    --font-mono: 'VT323', monospace;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
   }
 }
 
