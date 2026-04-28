@@ -254,10 +254,10 @@ const Index = () => {
       <div className="noise" />
 
       {/* Corners */}
-      <div className="fixed top-[72px] left-0 w-10 h-10 border-t border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed top-[72px] right-0 w-10 h-10 border-t border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed bottom-0 left-0 w-10 h-10 border-b border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
-      <div className="fixed bottom-0 right-0 w-10 h-10 border-b border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(174 100% 50% / 0.25)" }} />
+      <div className="fixed top-[72px] left-0 w-10 h-10 border-t border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed top-[72px] right-0 w-10 h-10 border-t border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed bottom-0 left-0 w-10 h-10 border-b border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
+      <div className="fixed bottom-0 right-0 w-10 h-10 border-b border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
 
       {/* NAV */}
       <nav
@@ -868,14 +868,14 @@ const Index = () => {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 no-underline border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(174 100% 50% / 0.25)" }}
+                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </a>
               ) : (
                 <span
                   className="inline-block font-body font-bold text-[0.62rem] tracking-[0.2em] uppercase py-1 px-3 border text-cyber-cyan"
-                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(174 100% 50% / 0.25)" }}
+                  style={{ background: "hsl(174 100% 50% / 0.08)", borderColor: "hsl(165 85% 48% / 0.25)" }}
                 >
                   {c.badge}
                 </span>
