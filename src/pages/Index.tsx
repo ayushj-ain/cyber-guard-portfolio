@@ -259,9 +259,9 @@ const Index = () => {
       <div className="fixed bottom-0 left-0 w-10 h-10 border-b border-l z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
       <div className="fixed bottom-0 right-0 w-10 h-10 border-b border-r z-[5] pointer-events-none" style={{ borderColor: "hsl(165 85% 48% / 0.25)" }} />
 
-      {/* NAV */}
+      {/* NAV — centered 3D nav links only */}
       <nav
-        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-between border-b backdrop-blur-xl"
+        className="fixed top-0 left-0 right-0 z-[800] h-16 flex items-center justify-center border-b backdrop-blur-xl"
         style={{
           paddingLeft: "clamp(20px, 5vw, 60px)",
           paddingRight: "clamp(20px, 5vw, 60px)",
@@ -269,73 +269,78 @@ const Index = () => {
           background: "hsl(222 47% 4% / 0.85)",
         }}
       >
-        {/* Monogram logo */}
-        <a href="#top" className="flex items-center gap-3 no-underline group">
-          <div
-            className="flex items-center justify-center w-9 h-9 border font-display font-bold text-[0.85rem] tracking-tight transition-all"
-            style={{
-              borderColor: "hsl(165 85% 48% / 0.5)",
-              color: "hsl(var(--cyber-cyan))",
-              background: "hsl(165 85% 48% / 0.08)",
-            }}
-          >
-            AJ
-          </div>
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display text-[0.7rem] font-semibold tracking-[0.18em] uppercase text-white">
-              Ayush Jain
-            </span>
-            <span className="font-mono-cyber text-[0.6rem] tracking-[0.22em] uppercase" style={{ color: "hsl(195 25% 65% / 0.55)" }}>
-              SOC · Ethical Hacker
-            </span>
-          </div>
-        </a>
-
-        {/* Center nav */}
-        <div className="hidden md:flex gap-7 lg:gap-9 absolute left-1/2 -translate-x-1/2">
+        <div
+          className="hidden md:flex gap-8 lg:gap-12"
+          style={{ perspective: "800px" }}
+        >
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="font-body font-semibold text-[0.72rem] tracking-[0.2em] uppercase no-underline transition-colors relative"
-              style={{ color: "hsl(195 25% 65% / 0.55)" }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "hsl(var(--cyber-cyan))";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "hsl(195 25% 65% / 0.55)";
-              }}
+              className="nav-3d font-display font-bold text-[0.78rem] tracking-[0.22em] uppercase no-underline"
             >
               {l.label}
             </a>
           ))}
         </div>
 
-        {/* CTA */}
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-2 font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
-          style={{
-            background: "hsl(var(--cyber-cyan))",
-            color: "hsl(var(--void))",
-            boxShadow: "0 0 24px hsl(165 85% 48% / 0.4)",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 36px hsl(165 85% 48% / 0.7)";
-            (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px hsl(165 85% 48% / 0.4)";
-            (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-          }}
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(var(--void) / 0.6)" }} />
-            <span className="relative rounded-full h-1.5 w-1.5" style={{ background: "hsl(var(--void))" }} />
-          </span>
-          Hire Me
-        </a>
+        {/* Mobile fallback */}
+        <div className="md:hidden flex gap-5 overflow-x-auto px-4">
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.id}
+              href={`#${l.id}`}
+              className="font-display font-bold text-[0.7rem] tracking-[0.18em] uppercase no-underline whitespace-nowrap"
+              style={{ color: "hsl(var(--cyber-cyan))" }}
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
       </nav>
+
+      {/* 3D nav link styles */}
+      <style>{`
+        .nav-3d {
+          color: hsl(195 25% 75% / 0.75);
+          position: relative;
+          display: inline-block;
+          transform-style: preserve-3d;
+          transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s, text-shadow 0.3s;
+          text-shadow:
+            0 1px 0 hsl(165 85% 48% / 0.25),
+            0 2px 0 hsl(165 85% 48% / 0.18),
+            0 3px 0 hsl(165 85% 48% / 0.12),
+            0 4px 8px hsl(222 47% 0% / 0.6);
+        }
+        .nav-3d::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -8px;
+          height: 2px;
+          background: linear-gradient(to right, transparent, hsl(var(--cyber-cyan)), transparent);
+          transform: scaleX(0);
+          transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+          box-shadow: 0 0 12px hsl(165 85% 48% / 0.7);
+        }
+        .nav-3d:hover {
+          color: hsl(var(--cyber-cyan));
+          transform: translateY(-2px) rotateX(15deg);
+          text-shadow:
+            0 1px 0 hsl(165 85% 48% / 0.5),
+            0 2px 0 hsl(165 85% 48% / 0.4),
+            0 3px 0 hsl(165 85% 48% / 0.3),
+            0 4px 0 hsl(165 85% 48% / 0.2),
+            0 5px 0 hsl(165 85% 48% / 0.15),
+            0 6px 14px hsl(165 85% 48% / 0.5),
+            0 0 20px hsl(165 85% 48% / 0.6);
+        }
+        .nav-3d:hover::after {
+          transform: scaleX(1);
+        }
+      `}</style>
 
       {/* Scroll progress dots */}
       <div className="fixed bottom-8 right-8 z-[900] flex flex-col gap-2 items-center">
