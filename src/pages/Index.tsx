@@ -287,17 +287,17 @@ const Index = () => {
                 pointerEvents: currentSlide === 0 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase">
-                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
-                Cybersecurity Analyst &nbsp;·&nbsp; SOC Specialist
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase flex items-center">
+                <span className="inline-block w-8 h-px bg-current mr-3" />
+                SOC Analyst &nbsp;·&nbsp; Ethical Hacker
               </div>
               <h1
                 className="font-display font-bold leading-[0.95]"
                 style={{
                   fontSize: "clamp(3.5rem, 11vw, 10rem)",
-                  letterSpacing: "-0.04em",
+                  letterSpacing: "-0.045em",
                   color: "#fff",
-                  textShadow: "0 0 80px hsl(165 85% 48% / 0.18)",
+                  textShadow: "0 0 80px hsl(165 85% 48% / 0.25)",
                 }}
               >
                 <span className="text-white">Ayush</span>
@@ -306,9 +306,9 @@ const Index = () => {
               </h1>
               <div
                 className="font-body tracking-[0.18em] text-cyber-cyan mt-6 uppercase font-medium"
-                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.8 }}
+                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.85 }}
               >
-                Threat Detection &nbsp;·&nbsp; Incident Response &nbsp;·&nbsp; Vulnerability Assessment
+                Threat Detection &nbsp;·&nbsp; Penetration Testing &nbsp;·&nbsp; Incident Response
               </div>
             </div>
 
