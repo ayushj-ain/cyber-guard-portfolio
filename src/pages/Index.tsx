@@ -324,21 +324,22 @@ const Index = () => {
                 pointerEvents: currentSlide === 1 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.6rem] text-cyber-cyan tracking-[0.2em] mb-8 text-glow-cyan">
-                // CREDENTIALS
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-cyan tracking-[0.35em] mb-8 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Credentials
               </div>
               <h2
-                className="font-display font-black mb-8"
+                className="font-display font-bold mb-8"
                 style={{
-                  fontSize: "clamp(2.5rem, 7vw, 6rem)",
+                  fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
                   color: "#fff",
-                  lineHeight: 0.95,
-                  letterSpacing: "-0.03em",
+                  lineHeight: 1,
+                  letterSpacing: "-0.035em",
                 }}
               >
-                EC-COUNCIL <span className="text-cyber-cyan">CSA</span>
+                EC-Council <span className="text-cyber-cyan">CSA</span>
                 <br />
-                CERTIFIED.
+                Certified.
               </h2>
               <p
                 className="font-body max-w-[560px] leading-[1.7] border-l-2 pl-5"
