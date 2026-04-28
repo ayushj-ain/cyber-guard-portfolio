@@ -760,19 +760,19 @@ const Index = () => {
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
   <div id={id} className="reveal flex items-end gap-6 mb-18 pt-30" style={{ marginBottom: "72px", paddingTop: "120px" }}>
-    <div className="font-mono-cyber leading-none" style={{ fontSize: "4rem", color: "hsl(174 100% 50% / 0.15)" }}>{num}</div>
+    <div className="font-mono-cyber leading-none font-medium" style={{ fontSize: "2.5rem", color: "hsl(165 85% 48% / 0.35)" }}>{num}</div>
     <h2
-      className="font-display font-black"
+      className="font-display font-bold"
       style={{
-        fontSize: "clamp(2rem, 5vw, 3.6rem)",
-        letterSpacing: "-0.03em",
+        fontSize: "clamp(1.8rem, 4.5vw, 3.2rem)",
+        letterSpacing: "-0.035em",
         color: "#fff",
-        textShadow: "0 0 40px hsl(174 100% 50% / 0.1)",
+        textShadow: "0 0 40px hsl(165 85% 48% / 0.12)",
       }}
     >
-      {title} <span className="text-cyber-cyan">{accent}</span>
+      {title && <span>{title} </span>}<span className="text-cyber-cyan">{accent}</span>
     </h2>
-    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(174 100% 50% / 0.3), transparent)" }} />
+    <div className="flex-1 h-px mb-3" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.4), transparent)" }} />
   </div>
 );
 
