@@ -4,11 +4,11 @@ import { MatrixRain } from "@/components/MatrixRain";
 import { CyberScene } from "@/components/CyberScene";
 
 const NAV_LINKS = [
-  { id: "career", label: "Career" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
-  { id: "certs", label: "Certs" },
+  { id: "certs", label: "Certifications" },
+  { id: "career", label: "Timeline" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -33,12 +33,12 @@ const PROJECTS = [
   {
     num: "02",
     year: "2024",
-    title: "SQL Injection Vulnerability Assessment Pipeline",
-    desc: "Performed manual + automated SQLi testing on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
+    title: "Ethical Hacking — SQL Injection Assessment Pipeline",
+    desc: "Performed manual + automated SQLi testing (ethical hacking engagement) on 3 deliberately vulnerable web apps using Burp Suite Pro and custom Python tooling. Built a CI-friendly Python detector that hooks into a monitoring pipeline, surfacing 8 critical injection points (UNION, blind boolean, time-based) and slashing MTTD by 30%. Findings mapped to OWASP Top 10 A03:2021.",
     tags: [
-      { label: "SQL Injection", v: "r" },
-      { label: "Python", v: "" },
+      { label: "Ethical Hacking", v: "r" },
       { label: "Burp Suite", v: "" },
+      { label: "Python", v: "" },
       { label: "OWASP", v: "" },
     ],
     metrics: [
@@ -68,20 +68,20 @@ const PROJECTS = [
 
 const SKILLS = [
   {
-    label: "SOC & Detection",
-    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "IOC Investigation", "Threat Hunting"],
+    label: "SOC & Defensive Ops",
+    chips: ["SIEM", "Splunk", "ELK Stack", "Alert Triage", "Log Analysis", "Threat Hunting", "Incident Response"],
+  },
+  {
+    label: "Ethical Hacking & Offense",
+    chips: ["Ethical Hacking", "Penetration Testing", "Vulnerability Exploitation", "Burp Suite", "Metasploit", "Nmap", "Wireshark", "Recon"],
   },
   {
     label: "Frameworks & Standards",
-    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61"],
+    chips: ["NIST CSF", "ISO 27001", "MITRE ATT&CK", "CIS Controls", "OWASP Top 10", "NIST SP 800-61", "Cyber Kill Chain"],
   },
   {
     label: "Tools & Scripting",
-    chips: ["Python", "SQL", "Bash", "Nmap", "Wireshark", "Burp Suite", "Git", "GitHub"],
-  },
-  {
-    label: "Security Domains",
-    chips: ["Incident Response", "Vuln Assessment", "SQL Injection", "Network Security", "IDS / IPS", "Linux / Unix"],
+    chips: ["Python", "Bash", "SQL", "Linux / Unix", "Git", "GitHub", "Splunk SPL"],
   },
 ];
 
@@ -212,9 +212,41 @@ const Index = () => {
             </a>
           ))}
         </div>
-        <div className="font-mono-cyber text-[1.1rem] text-cyber-cyan tracking-wider flex items-center gap-2.5">
-          <div className="pulse" />
-          <span className="hidden sm:inline">AVAILABLE FOR HIRE</span>
+        <div className="flex items-center gap-4">
+          <div
+            className="hidden sm:flex items-center gap-2 py-1.5 px-3 rounded-full border"
+            style={{
+              borderColor: "hsl(165 85% 48% / 0.25)",
+              background: "hsl(165 85% 48% / 0.06)",
+            }}
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inset-0 rounded-full animate-ping" style={{ background: "hsl(165 85% 48% / 0.55)" }} />
+              <span className="relative rounded-full h-2 w-2" style={{ background: "hsl(var(--cyber-cyan))" }} />
+            </span>
+            <span className="font-body font-semibold text-[0.65rem] tracking-[0.2em] uppercase text-cyber-cyan">
+              Open to Work
+            </span>
+          </div>
+          <a
+            href="#contact"
+            className="hidden md:inline-flex font-body font-bold text-[0.65rem] tracking-[0.22em] uppercase py-2 px-4 no-underline transition-all"
+            style={{
+              background: "hsl(var(--cyber-cyan))",
+              color: "hsl(var(--void))",
+              boxShadow: "0 0 20px hsl(165 85% 48% / 0.35)",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px hsl(165 85% 48% / 0.6)";
+              (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px hsl(165 85% 48% / 0.35)";
+              (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+            }}
+          >
+            Hire Me →
+          </a>
         </div>
       </nav>
 
@@ -247,7 +279,42 @@ const Index = () => {
             className="absolute inset-0 z-[2] pointer-events-none"
             style={{
               background:
-                "linear-gradient(90deg, hsl(200 100% 1.5% / 0.85) 0%, hsl(200 100% 1.5% / 0.55) 50%, hsl(200 100% 1.5% / 0.85) 100%)",
+                "linear-gradient(95deg, hsl(222 47% 4% / 0.92) 0%, hsl(222 47% 4% / 0.45) 55%, hsl(222 47% 4% / 0.7) 100%)",
+            }}
+          />
+
+          {/* Color accent glows */}
+          <div
+            className="absolute top-[15%] left-[-10%] w-[40vw] h-[40vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(165 85% 48% / 0.18) 0%, transparent 65%)",
+              filter: "blur(40px)",
+            }}
+          />
+          <div
+            className="absolute bottom-[5%] right-[-5%] w-[35vw] h-[35vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(38 95% 58% / 0.14) 0%, transparent 65%)",
+              filter: "blur(40px)",
+            }}
+          />
+          <div
+            className="absolute top-[60%] left-[40%] w-[25vw] h-[25vw] z-[2] pointer-events-none rounded-full"
+            style={{
+              background: "radial-gradient(circle, hsl(250 70% 65% / 0.12) 0%, transparent 65%)",
+              filter: "blur(50px)",
+            }}
+          />
+
+          {/* Subtle grid */}
+          <div
+            className="absolute inset-0 z-[2] pointer-events-none opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsl(165 85% 48%) 1px, transparent 1px), linear-gradient(90deg, hsl(165 85% 48%) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+              maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
             }}
           />
 
@@ -256,7 +323,7 @@ const Index = () => {
             className="absolute top-1/2 left-1/2 font-display font-black whitespace-nowrap pointer-events-none select-none z-[3]"
             style={{
               fontSize: "clamp(8rem, 20vw, 22rem)",
-              color: "hsl(174 100% 50% / 0.04)",
+              color: "hsl(165 85% 48% / 0.05)",
               transform: "translate(-50%, -50%)",
               letterSpacing: "-0.05em",
             }}
@@ -270,6 +337,14 @@ const Index = () => {
             style={{
               background: "linear-gradient(to bottom, transparent, hsl(var(--cyber-cyan)), transparent)",
               opacity: 0.4,
+            }}
+          />
+          {/* Left accent bar */}
+          <div
+            className="absolute left-0 top-0 bottom-0 w-[2px] z-[4]"
+            style={{
+              background: "linear-gradient(to bottom, transparent, hsl(var(--cyber-red)), transparent)",
+              opacity: 0.3,
             }}
           />
 
@@ -287,17 +362,17 @@ const Index = () => {
                 pointerEvents: currentSlide === 0 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase">
-                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
-                Cybersecurity Analyst &nbsp;·&nbsp; SOC Specialist
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase flex items-center">
+                <span className="inline-block w-8 h-px bg-current mr-3" />
+                SOC Analyst &nbsp;·&nbsp; Ethical Hacker
               </div>
               <h1
                 className="font-display font-bold leading-[0.95]"
                 style={{
                   fontSize: "clamp(3.5rem, 11vw, 10rem)",
-                  letterSpacing: "-0.04em",
+                  letterSpacing: "-0.045em",
                   color: "#fff",
-                  textShadow: "0 0 80px hsl(165 85% 48% / 0.18)",
+                  textShadow: "0 0 80px hsl(165 85% 48% / 0.25)",
                 }}
               >
                 <span className="text-white">Ayush</span>
@@ -306,9 +381,39 @@ const Index = () => {
               </h1>
               <div
                 className="font-body tracking-[0.18em] text-cyber-cyan mt-6 uppercase font-medium"
-                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.8 }}
+                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.85 }}
               >
-                Threat Detection &nbsp;·&nbsp; Incident Response &nbsp;·&nbsp; Vulnerability Assessment
+                Threat Detection &nbsp;·&nbsp; Penetration Testing &nbsp;·&nbsp; Incident Response
+              </div>
+
+              {/* Hero meta strip */}
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                {[
+                  { l: "EC-Council CSA", c: "cyan" },
+                  { l: "Deloitte Cyber Sim", c: "cyan" },
+                  { l: "MCA · Cyber Warfare", c: "amber" },
+                  { l: "Jaipur, India", c: "muted" },
+                ].map((t) => (
+                  <span
+                    key={t.l}
+                    className="font-mono-cyber text-[0.7rem] tracking-[0.18em] uppercase py-1.5 px-3 border rounded-sm"
+                    style={
+                      t.c === "cyan"
+                        ? { color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.35)", background: "hsl(165 85% 48% / 0.06)" }
+                        : t.c === "amber"
+                        ? { color: "hsl(var(--cyber-red))", borderColor: "hsl(38 95% 58% / 0.35)", background: "hsl(38 95% 58% / 0.06)" }
+                        : { color: "hsl(195 25% 65% / 0.7)", borderColor: "hsl(195 25% 65% / 0.18)", background: "hsl(0 0% 100% / 0.02)" }
+                    }
+                  >
+                    {t.l}
+                  </span>
+                ))}
+              </div>
+
+              {/* Scroll cue */}
+              <div className="mt-10 flex items-center gap-3 font-mono-cyber text-[0.7rem] tracking-[0.3em] uppercase" style={{ color: "hsl(195 25% 65% / 0.45)" }}>
+                <span className="inline-block w-px h-8 animate-pulse" style={{ background: "hsl(165 85% 48% / 0.6)" }} />
+                Scroll to explore
               </div>
             </div>
 
