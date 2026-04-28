@@ -287,27 +287,26 @@ const Index = () => {
                 pointerEvents: currentSlide === 0 ? "auto" : "none",
               }}
             >
-              <div className="font-mono-cyber text-[1.4rem] text-cyber-red tracking-[0.3em] mb-6 text-glow-red">
-                // CYBERSECURITY ANALYST &nbsp;·&nbsp; SOC SPECIALIST
+              <div className="font-mono-cyber text-[0.85rem] text-cyber-red tracking-[0.35em] mb-6 uppercase">
+                <span className="inline-block w-8 h-px bg-current align-middle mr-3" />
+                Cybersecurity Analyst &nbsp;·&nbsp; SOC Specialist
               </div>
               <h1
-                className="font-display font-black leading-[0.9] glitch"
+                className="font-display font-bold leading-[0.95]"
                 style={{
-                  fontSize: "clamp(4rem, 12vw, 11rem)",
+                  fontSize: "clamp(3.5rem, 11vw, 10rem)",
                   letterSpacing: "-0.04em",
                   color: "#fff",
-                  textShadow: "0 0 80px hsl(174 100% 50% / 0.15)",
+                  textShadow: "0 0 80px hsl(165 85% 48% / 0.18)",
                 }}
               >
-                <span className="stroke-cyan">AYU</span>
-                <span>SH</span>
+                <span className="text-white">Ayush</span>
                 <br />
-                <span>JAI</span>
-                <span className="stroke-red">N</span>
+                <span className="stroke-cyan">Jain.</span>
               </h1>
               <div
-                className="font-display tracking-[0.3em] text-cyber-cyan mt-4"
-                style={{ fontSize: "clamp(0.75rem, 1.5vw, 1.1rem)", opacity: 0.7 }}
+                className="font-body tracking-[0.18em] text-cyber-cyan mt-6 uppercase font-medium"
+                style={{ fontSize: "clamp(0.75rem, 1.4vw, 1rem)", opacity: 0.8 }}
               >
                 Threat Detection &nbsp;·&nbsp; Incident Response &nbsp;·&nbsp; Vulnerability Assessment
               </div>
