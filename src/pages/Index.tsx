@@ -658,7 +658,7 @@ const Index = () => {
         </div>
 
         {/* CERTS */}
-        <SectionHead num="04" title="CERTI" accent="FICATIONS" id="certs" />
+        <SectionHead num="04" title="" accent="CERTIFICATIONS" id="certs" />
         <div className="reveal grid md:grid-cols-3 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {CERTS.map((c) => (
             <div key={c.name} className="cyber-card" style={{ padding: "36px 28px" }}>
