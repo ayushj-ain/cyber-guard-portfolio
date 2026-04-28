@@ -51,9 +51,9 @@
     --gradient-line: linear-gradient(to right, hsl(var(--cyber-cyan) / 0.3), transparent);
     --gradient-accent: linear-gradient(to right, hsl(var(--cyber-cyan)), hsl(var(--cyber-purple)), transparent);
 
-    --font-display: 'Space Grotesk', 'Inter', sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Sora', 'Inter', sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
   }
 }
 
