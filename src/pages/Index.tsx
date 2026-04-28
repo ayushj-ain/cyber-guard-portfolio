@@ -999,28 +999,26 @@ const Index = () => {
 };
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
-  <div id={id} className="reveal mb-12" style={{ paddingTop: "120px", marginBottom: "56px" }}>
-    <div className="flex items-center gap-3 mb-4">
+  <div id={id} className="reveal" style={{ paddingTop: "160px", marginBottom: "96px", scrollMarginTop: "80px" }}>
+    <div className="flex items-center gap-4 mb-8">
       <span
-        className="font-mono-cyber text-[0.7rem] tracking-[0.32em] uppercase font-medium py-1 px-2.5 border"
+        className="font-mono-cyber text-[0.7rem] tracking-[0.35em] uppercase font-semibold py-1.5 px-3 border"
         style={{ color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.3)", background: "hsl(165 85% 48% / 0.05)" }}
       >
         Section {num}
       </span>
-      <span className="flex-1 h-px" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.35), transparent)" }} />
+      <span className="flex-1 h-px" style={{ background: "linear-gradient(to right, hsl(165 85% 48% / 0.4), transparent)" }} />
     </div>
     <h2
-      className="font-display font-bold flex items-baseline gap-3 flex-wrap"
+      className="font-display font-bold flex items-baseline gap-4 flex-wrap leading-[0.95]"
       style={{
-        fontSize: "clamp(2rem, 5vw, 3.6rem)",
-        letterSpacing: "-0.04em",
-        color: "#fff",
-        textShadow: "0 0 40px hsl(165 85% 48% / 0.12)",
+        fontSize: "clamp(2.5rem, 6.5vw, 5rem)",
+        letterSpacing: "-0.045em",
       }}
     >
-      {title && <span className="text-white opacity-90">{title}</span>}
-      <span className="text-cyber-cyan">{accent}</span>
-      <span className="text-cyber-red font-display font-bold">.</span>
+      {title && <span className="head-3d text-white">{title}</span>}
+      <span className="head-3d text-cyber-cyan">{accent}</span>
+      <span className="head-3d-accent text-cyber-red">.</span>
     </h2>
   </div>
 );
