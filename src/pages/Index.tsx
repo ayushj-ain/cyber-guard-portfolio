@@ -693,7 +693,7 @@ const Index = () => {
         </div>
 
         {/* EDUCATION */}
-        <SectionHead num="05" title="EDUCA" accent="TION" id="education" />
+        <SectionHead num="05" title="" accent="EDUCATION" id="education" />
         <div className="reveal flex flex-col gap-px pb-30" style={{ background: "hsl(174 100% 50% / 0.08)", paddingBottom: "120px" }}>
           {[
             { deg: "Master of Computer Applications — MCA", school: "Poornima University, Jaipur · Cyber / Electronic Operations & Warfare", year: "AUG 2025 — MAY 2027" },
