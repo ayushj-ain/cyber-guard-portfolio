@@ -4,11 +4,11 @@ import { MatrixRain } from "@/components/MatrixRain";
 import { CyberScene } from "@/components/CyberScene";
 
 const NAV_LINKS = [
-  { id: "career", label: "Career" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
-  { id: "certs", label: "Certs" },
+  { id: "certs", label: "Certifications" },
+  { id: "career", label: "Timeline" },
   { id: "contact", label: "Contact" },
 ];
 
