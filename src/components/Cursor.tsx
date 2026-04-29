@@ -49,9 +49,9 @@ export const Cursor = () => {
   }, []);
 
   return (
-    <>
+    <div className="hidden md:block pointer-events-none">
       <div id="cur" ref={curRef} />
       <div id="cur2" ref={cur2Ref} />
-    </>
+    </div>
   );
 };

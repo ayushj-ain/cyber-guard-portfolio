@@ -285,7 +285,7 @@ const Index = () => {
         </div>
 
         {/* Mobile fallback */}
-        <div className="md:hidden flex gap-5 overflow-x-auto px-4">
+        <div className="md:hidden flex gap-5 overflow-x-auto px-4 hide-scrollbar w-full">
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
@@ -301,6 +301,13 @@ const Index = () => {
 
       {/* 3D nav link styles */}
       <style>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
         .nav-3d {
           color: hsl(195 25% 75% / 0.75);
           position: relative;
@@ -444,10 +451,8 @@ const Index = () => {
           <div className="relative z-[5] h-full">
             {/* Slide 0: Name */}
             <div
-              className="absolute inset-0 flex flex-col justify-center px-6 md:px-15 transition-all duration-700"
+              className="absolute inset-0 flex flex-col justify-center px-4 md:px-6 transition-all duration-700"
               style={{
-                paddingLeft: "clamp(24px, 5vw, 60px)",
-                paddingRight: "clamp(24px, 5vw, 60px)",
                 paddingTop: "100px",
                 opacity: currentSlide === 0 ? 1 : 0,
                 transform: currentSlide === 0 ? "translateY(0)" : "translateY(40px)",
@@ -479,7 +484,7 @@ const Index = () => {
               </div>
 
               {/* Hero meta strip */}
-              <div className="mt-10 flex flex-wrap items-center gap-3">
+              <div className="mt-10 flex flex-wrap items-center gap-2 md:gap-3">
                 {[
                   { l: "EC-Council CSA", c: "cyan" },
                   { l: "Deloitte Cyber Sim", c: "cyan" },
@@ -488,7 +493,7 @@ const Index = () => {
                 ].map((t) => (
                   <span
                     key={t.l}
-                    className="font-mono-cyber text-[0.7rem] tracking-[0.18em] uppercase py-1.5 px-3 border rounded-sm"
+                    className="font-mono-cyber text-[0.6rem] md:text-[0.7rem] tracking-[0.18em] uppercase py-1.5 px-2 md:px-3 border rounded-sm"
                     style={
                       t.c === "cyan"
                         ? { color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.35)", background: "hsl(165 85% 48% / 0.06)" }
@@ -511,10 +516,8 @@ const Index = () => {
 
             {/* Slide 1: Stats */}
             <div
-              className="absolute inset-0 flex flex-col justify-center transition-all duration-700"
+              className="absolute inset-0 flex flex-col justify-center px-4 md:px-6 transition-all duration-700"
               style={{
-                paddingLeft: "clamp(24px, 5vw, 60px)",
-                paddingRight: "clamp(24px, 5vw, 60px)",
                 paddingTop: "100px",
                 opacity: currentSlide === 1 ? 1 : 0,
                 transform: currentSlide === 1 ? "translateY(0)" : "translateY(40px)",
@@ -552,10 +555,8 @@ const Index = () => {
 
             {/* Slide 2: Specialization */}
             <div
-              className="absolute inset-0 flex flex-col justify-center transition-all duration-700"
+              className="absolute inset-0 flex flex-col justify-center px-4 md:px-6 transition-all duration-700"
               style={{
-                paddingLeft: "clamp(24px, 5vw, 60px)",
-                paddingRight: "clamp(24px, 5vw, 60px)",
                 paddingTop: "100px",
                 opacity: currentSlide === 2 ? 1 : 0,
                 transform: currentSlide === 2 ? "translateY(0)" : "translateY(40px)",
@@ -594,10 +595,8 @@ const Index = () => {
 
             {/* Slide 3: CTA */}
             <div
-              className="absolute inset-0 flex flex-col justify-center transition-all duration-700"
+              className="absolute inset-0 flex flex-col justify-center px-4 md:px-6 transition-all duration-700"
               style={{
-                paddingLeft: "clamp(24px, 5vw, 60px)",
-                paddingRight: "clamp(24px, 5vw, 60px)",
                 paddingTop: "100px",
                 opacity: currentSlide === 3 ? 1 : 0,
                 transform: currentSlide === 3 ? "translateY(0)" : "translateY(40px)",
@@ -621,7 +620,7 @@ const Index = () => {
                 <br />
                 Me.
               </h2>
-              <div className="flex flex-wrap gap-0 mb-12">
+              <div className="flex flex-wrap gap-4 md:gap-0 mb-12">
                 {[
                   { n: "TOP 5%", l: "Detection Accuracy" },
                   { n: "95%", l: "Alert Triage Rate" },
@@ -630,7 +629,7 @@ const Index = () => {
                 ].map((s, i, arr) => (
                   <div
                     key={s.l}
-                    className="py-5 pr-9 mr-9"
+                    className="py-2 md:py-5 pr-4 md:pr-9 mr-4 md:mr-9"
                     style={{
                       borderRight: i < arr.length - 1 ? "1px solid hsl(165 85% 48% / 0.15)" : "none",
                     }}
@@ -714,10 +713,10 @@ const Index = () => {
       `}</style>
 
       {/* SECTIONS */}
-      <div className="relative z-10 max-w-[1160px] mx-auto px-6 md:px-15" style={{ paddingLeft: "clamp(24px, 5vw, 60px)", paddingRight: "clamp(24px, 5vw, 60px)" }}>
+      <div className="relative z-10 max-w-[1160px] mx-auto px-4 md:px-15 lg:px-20">
         {/* CAREER */}
         <SectionHead num="00" title="" accent="TIMELINE" id="career" />
-        <div className="reveal pl-10 relative pb-30" style={{ paddingBottom: "120px" }}>
+        <div className="reveal pl-6 md:pl-10 relative pb-30" style={{ paddingBottom: "120px" }}>
           <div
             className="absolute left-0 top-0 bottom-0 w-px"
             style={{ background: "linear-gradient(to bottom, hsl(165 85% 48% / 0.4), hsl(165 85% 48% / 0.05))" }}
@@ -744,7 +743,7 @@ const Index = () => {
           ].map((tl) => (
             <div key={tl.role} className="relative mb-16 last:mb-0">
               <div
-                className="absolute -left-[46px] top-1.5 w-3 h-3 border-2 rounded-full bg-void"
+                className="absolute -left-[30px] md:-left-[46px] top-1.5 w-3 h-3 border-2 rounded-full bg-void"
                 style={{ borderColor: "hsl(var(--cyber-cyan))", boxShadow: "var(--glow-cyan)" }}
               />
               <div className="font-mono-cyber text-base text-cyber-red tracking-[0.15em] mb-2">{tl.date}</div>
@@ -757,9 +756,9 @@ const Index = () => {
 
         {/* PROJECTS */}
         <SectionHead num="01" title="" accent="PROJECTS" id="projects" />
-        <div className="reveal grid md:grid-cols-3 gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", border: "1px solid hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
+        <div className="reveal grid md:grid-cols-2 lg:grid-cols-3 gap-px pb-30" style={{ background: "hsl(165 85% 48% / 0.08)", border: "1px solid hsl(165 85% 48% / 0.08)", paddingBottom: "120px" }}>
           {PROJECTS.map((p) => (
-            <div key={p.num} className="cyber-card p-9 px-9 py-11 relative" style={{ padding: "44px 36px" }}>
+            <div key={p.num} className="cyber-card p-6 md:p-9 relative">
               <div
                 className="absolute top-3 right-5 font-mono-cyber leading-none select-none pointer-events-none"
                 style={{ fontSize: "5rem", color: "hsl(165 85% 48% / 0.05)" }}
@@ -802,7 +801,7 @@ const Index = () => {
         <SectionHead num="02" title="" accent="SKILLS" id="skills" />
         <div className="reveal grid md:grid-cols-2 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {SKILLS.map((s) => (
-            <div key={s.label} className="cyber-card p-9" style={{ padding: "36px" }}>
+            <div key={s.label} className="cyber-card p-6 md:p-9">
               <div className="font-display text-[0.63rem] font-bold tracking-[0.25em] uppercase text-cyber-cyan mb-6 pb-4 border-b flex items-center gap-3" style={{ borderColor: "hsl(165 85% 48% / 0.1)" }}>
                 <span className="w-1 h-1 bg-cyber-cyan glow-cyan" style={{ background: "hsl(var(--cyber-cyan))" }} />
                 {s.label}
@@ -871,7 +870,7 @@ const Index = () => {
               ],
             },
           ].map((xp) => (
-            <div key={xp.role} className="cyber-card relative" style={{ padding: "44px 48px" }}>
+            <div key={xp.role} className="cyber-card relative p-6 md:p-12">
               <div className="flex items-start justify-between gap-6 mb-6 flex-wrap">
                 <div>
                   <div className="font-display text-[1.35rem] font-bold text-white tracking-[-0.02em] mb-2">{xp.role}</div>
@@ -899,9 +898,9 @@ const Index = () => {
 
         {/* CERTS */}
         <SectionHead num="04" title="" accent="CERTIFICATIONS" id="certs" />
-        <div className="reveal grid md:grid-cols-3 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
+        <div className="reveal grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-30" style={{ paddingBottom: "120px" }}>
           {CERTS.map((c) => (
-            <div key={c.name} className="cyber-card" style={{ padding: "36px 28px" }}>
+            <div key={c.name} className="cyber-card p-6 md:p-9">
               <div
                 className="w-13 h-13 flex items-center justify-center mb-5 border"
                 style={{ width: "52px", height: "52px", background: "hsl(165 85% 48% / 0.07)", borderColor: "hsl(165 85% 48% / 0.2)", fontSize: "1.5rem" }}
@@ -939,20 +938,20 @@ const Index = () => {
             { deg: "Master of Computer Applications — MCA", school: "Poornima University, Jaipur · Cyber / Electronic Operations & Warfare", year: "AUG 2025 — MAY 2027" },
             { deg: "Bachelor's Degree — Computer Science", school: "Poddar International College, Jaipur", year: "2023 — 2025" },
           ].map((e) => (
-            <div key={e.deg} className="bg-deep flex items-center gap-8 transition-colors" style={{ padding: "36px 48px" }}>
-              <div className="w-3 h-3 border-2 rounded-full flex-shrink-0" style={{ borderColor: "hsl(var(--cyber-cyan))" }} />
+            <div key={e.deg} className="bg-deep flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 transition-colors p-6 md:p-12">
+              <div className="w-3 h-3 border-2 rounded-full flex-shrink-0 hidden md:block" style={{ borderColor: "hsl(var(--cyber-cyan))" }} />
               <div className="flex-1">
                 <div className="font-display font-bold text-base text-white tracking-[-0.01em] mb-1.5">{e.deg}</div>
                 <div className="font-body text-[0.85rem] font-semibold tracking-[0.1em]" style={{ color: "hsl(165 85% 48% / 0.6)" }}>{e.school}</div>
               </div>
-              <div className="font-mono-cyber text-[1.1rem] whitespace-nowrap tracking-wider ml-auto" style={{ color: "hsl(195 40% 70% / 0.4)" }}>{e.year}</div>
+              <div className="font-mono-cyber text-[1.1rem] whitespace-nowrap tracking-wider ml-0 md:ml-auto" style={{ color: "hsl(195 40% 70% / 0.4)" }}>{e.year}</div>
             </div>
           ))}
         </div>
 
         {/* CONTACT */}
         <SectionHead num="06" title="" accent="CONTACT" id="contact" />
-        <div className="reveal cyber-card relative overflow-hidden text-center" style={{ padding: "80px 60px", marginBottom: "120px" }}>
+        <div className="reveal cyber-card relative overflow-hidden text-center p-8 md:p-20 mb-30" style={{ marginBottom: "120px" }}>
           <div
             className="absolute rounded-full pointer-events-none"
             style={{
@@ -999,10 +998,10 @@ const Index = () => {
 };
 
 const SectionHead = ({ num, title, accent, id }: { num: string; title: string; accent: string; id: string }) => (
-  <div id={id} className="reveal" style={{ paddingTop: "160px", marginBottom: "96px", scrollMarginTop: "80px" }}>
-    <div className="flex items-center gap-4 mb-8">
+  <div id={id} className="reveal pt-20 md:pt-40 mb-12 md:mb-24" style={{ scrollMarginTop: "80px" }}>
+    <div className="flex items-center gap-4 mb-6 md:mb-8">
       <span
-        className="font-mono-cyber text-[0.7rem] tracking-[0.35em] uppercase font-semibold py-1.5 px-3 border"
+        className="font-mono-cyber text-[0.6rem] md:text-[0.7rem] tracking-[0.35em] uppercase font-semibold py-1.5 px-3 border"
         style={{ color: "hsl(var(--cyber-cyan))", borderColor: "hsl(165 85% 48% / 0.3)", background: "hsl(165 85% 48% / 0.05)" }}
       >
         Section {num}
